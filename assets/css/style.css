@@ -1,1 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/*-------- Global style*/
+
+body {
+    background-image: linear-gradient(#79caff, #e4e170, #1a913d);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center;
+    height: 600px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: -webkit-center;
+}
+
+h1 {
+    font-size: 25px;
+    margin: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 5px;
+}
+
+#quiz {
+    background-image: url('../images/landscape_600x400.webp');
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.quiz-area {
+    clear: left;
+    background-size: cover;
+    background-position: center;
+}
+
+.btns {
+    display: block;
+    border: solid;
+    border-radius: 10px;
+    margin: 10px;
+    width: 90%;
+    height: 50px;
+    max-height: 90%;
+    letter-spacing: 1.5px;
+    background-color: white;
+    color: black;
+}
+
+.btns:hover {
+    background-color: #e4e170;
+    transition: 0.3s;
+}
+
+/*--------Score area style*/
+
+#score-correct {
+    display: inline-block;
+    background: white;
+    border: solid;
+    border-radius: 8px;
+    padding: 5px;
+    color: green;
+}
+
+#score-incorrect {
+    display: inline-block;
+    background: white;
+    border: solid;
+    border-radius: 8px;
+    padding: 5px;
+    color: red;
+}
