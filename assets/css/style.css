@@ -55,6 +55,7 @@ h2 {
     letter-spacing: 1.5px;
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
 .btns:hover {
@@ -63,7 +64,7 @@ h2 {
 }
 
 #next-button {
-    display: inline-block;
+    display: none;
     margin: 20px;
     border: solid;
     border-radius: 5px;
@@ -72,6 +73,7 @@ h2 {
     background-color: black;
     text-transform: uppercase;
     color: white;
+    cursor: pointer;
 }
 
 #next-button:hover {
@@ -80,6 +82,10 @@ h2 {
 }
 
 /*--------Score area style*/
+
+#score {
+    padding: 5px;
+}
 
 #score-correct {
     display: inline-block;

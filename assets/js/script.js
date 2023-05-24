@@ -1,3 +1,12 @@
+function startQuiz()
+function displayQuestion()
+function selectAnswer()
+function displayScore()
+function nextQuestion()
+function resetQuiz()
+function incrementCorrectAnswer()
+function incrementIncorrectAnswer()
+
 //quiz questions 15 in total displayed in order
 
 
