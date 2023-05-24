@@ -1,4 +1,3 @@
-//function startQuiz()
 //function displayQuestion()
 //function selectAnswer()
 //function displayScore()
@@ -15,10 +14,30 @@ const buttonNext = document.getElementById("next-button");
 
 //Store question index and score
 
-let presentQuestionList = 0;
+let questionList = 0;
 let score = 0;
 
-//quiz questions 15 in total displayed in order
+//Starts quiz with the first question and displays next button
+
+function beginQuiz(){
+    questionList = 0;
+    score = 0;
+    buttonNext.innerHTML = "Next Question";
+    displayQuestion();
+}
+
+//Itterate the questions array and displays each in order
+
+function displayQuestion(){
+    let questionShown = questions[questionList];
+    let nextQuestionShown = questionList + 1;
+    questionOption.innerHTML = nextQuestionShown + ". " + questionShown.question;
+}
+    
+
+
+
+//quiz questions and answers array 15 in total displayed in order
 
 const questions = [
     {
