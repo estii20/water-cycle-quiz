@@ -1,14 +1,24 @@
-function startQuiz()
-function displayQuestion()
-function selectAnswer()
-function displayScore()
-function nextQuestion()
-function resetQuiz()
-function incrementCorrectAnswer()
-function incrementIncorrectAnswer()
+//function startQuiz()
+//function displayQuestion()
+//function selectAnswer()
+//function displayScore()
+//function nextQuestion()
+//function resetQuiz()
+//function incrementCorrectAnswer()
+//function incrementIncorrectAnswer()
+
+//Quiz area variables
+
+const questionOption = document.getElementById("question");
+const buttonsAnswer = document.getElementById("answer-btns");
+const buttonNext = document.getElementById("next-button");
+
+//Store question index and score
+
+let presentQuestionList = 0;
+let score = 0;
 
 //quiz questions 15 in total displayed in order
-
 
 const questions = [
     {
