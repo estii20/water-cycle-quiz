@@ -65,7 +65,7 @@ h2 {
 }
 
 #start-button {
-    display: none;
+    display: inline-block;
     margin: 20px;
     border: solid;
     border-radius: 5px;
