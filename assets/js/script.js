@@ -8,25 +8,37 @@
 
 //Quiz area variables
 
+const quizPanelElement = document.getElementsByClassName("quiz-panel")
+const startButton = document.getElementById("start-button");
 const questionOption = document.getElementById("question");
 const buttonsAnswer = document.getElementById("answer-btns");
 const buttonNext = document.getElementById("next-button");
+const scoreCorrectElement = document.getElementById("score-correct");
+const scoreIncorrectElement = document.getElementById("score-incorrect");
+
+startbutton.addEventListener("click", beginQuiz);
+    startButton.innerHTML = "Start";
+    alert("Lets go!");
 
 //Store question index and score
 
 let questionList = 0;
 let score = 0;
+let scoreCorrect = 0;
+let scoreIncorrect = 0;
 
 //Starts quiz with the first question and displays next button
 
 function beginQuiz(){
     questionList = 0;
     score = 0;
+    scoreCorrect = 0;
+    scoreIncorrect = 0;
     buttonNext.innerHTML = "Next Question";
     displayQuestion();
 }
 
-//Itterate the questions array and displays each in order
+//Iterate the questions array and displays each in order
 
 function displayQuestion(){
     let questionShown = questions[questionList];

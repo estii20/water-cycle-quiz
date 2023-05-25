@@ -64,6 +64,19 @@ h2 {
     transition: 0.3s;
 }
 
+#start-button {
+    display: none;
+    margin: 20px;
+    border: solid;
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+    background-color: black;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+}
+
 #next-button {
     display: none;
     margin: 20px;
