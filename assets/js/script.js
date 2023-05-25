@@ -16,7 +16,7 @@ const buttonNext = document.getElementById("next-button");
 const scoreCorrectElement = document.getElementById("score-correct");
 const scoreIncorrectElement = document.getElementById("score-incorrect");
 
-startbutton.addEventListener("click", beginQuiz);
+startButton.addEventListener("click", beginQuiz);
     startButton.innerHTML = "Start";
     alert("Lets go!");
 
