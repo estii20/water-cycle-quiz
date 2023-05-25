@@ -8,7 +8,7 @@
 
 //Quiz area variables
 
-const quizPanelElement = document.getElementsByClassName("quiz-panel")
+const quizPanelElement = document.getElementsByClassName("quiz-panel");
 const startButton = document.getElementById("start-button");
 const questionOption = document.getElementById("question");
 const buttonsAnswer = document.getElementById("answer-btns");
