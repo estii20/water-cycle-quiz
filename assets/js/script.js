@@ -52,7 +52,19 @@ function displayQuestion() {
     let questionShown = questions[questionList];
     let nextQuestionShown = questionList + 1;
     questionOption.innerHTML = nextQuestionShown + ". " + questionShown.question;
+
+    //Create buttons to display the answers
+
+    questionShown.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.classList.add("btns");
+        buttonsAnswer.appendChild(button); 
+    });
 }
+
+//Start quiz
+
+beginQuiz();
 
 
 
