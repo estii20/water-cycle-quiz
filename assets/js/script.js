@@ -1,6 +1,3 @@
-//function incrementCorrectAnswer()
-//function incrementIncorrectAnswer()
-
 //Quiz area variables
 
 const quizPanelElement = document.getElementsByClassName("quiz-panel");
@@ -68,7 +65,24 @@ function resetQuiz() {
     }
 }
 
-//Selects the correct answer from the question array and adds the class of correct and incorrect
+//Gets the current score and increments it by 1
+
+function incrementCorrectAnswer() {
+    let oldScore = parseInt(document.getElementById("score-correct").innerText);
+    document.getElementById("score-correct").innerText=++oldScore;
+}
+
+//Gets the current score and increments it by 1
+
+function incrementIncorrectAnswer() {
+    let oldScore = parseInt(document.getElementById("score-incorrect").innerText);
+    document.getElementById("score-incorrect").innerText = ++oldScore;
+}
+
+/**
+ * Selects the correct answer from the question array and 
+ * adds the class of correct and incorrect and increments the old score
+ */
 
 function selectAnswer(e) {
     const btnSelected = e.target
@@ -76,8 +90,10 @@ function selectAnswer(e) {
     if (correct) {
         btnSelected.classList.add("correct");
         score++;
+        incrementCorrectAnswer();
     }else{
         btnSelected.classList.add("incorrect");
+        incrementIncorrectAnswer();
     }
     Array.from(buttonsAnswer.children).forEach(button => {
         if(button.dataset.correct === "true") {
@@ -88,7 +104,10 @@ function selectAnswer(e) {
     buttonNext.style.display = "inline-block";
 }
 
-//Displays the score to the user at the end of the questions array
+/**
+ * Displays the score to the user at the end of the 
+ * questions array and restarts the quiz
+ */
 
 function displayScore() {
     resetQuiz();
@@ -97,7 +116,10 @@ function displayScore() {
     buttonNext.style.display = "inline-block";
 }
 
-//Displays the next question in the questions array until the end when the score is shown
+/**
+ * Displays the next question in the questions 
+ * array until the end when the score is shown
+ */
 
 function nextQuestion(){
     if(questionList < questions.length) {
@@ -116,8 +138,6 @@ buttonNext.addEventListener("click", ()=> {
 //Start quiz
 
 beginQuiz();
-
-
 
 
 //quiz questions and answers array 15 in total displayed in order
