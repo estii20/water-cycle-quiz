@@ -59,7 +59,7 @@ h2 {
     cursor: pointer;
 }
 
-.btns:hover {
+.btns:hover:not([disabled]) {
     background-color: #e4e170;
     transition: 0.3s;
 }
@@ -69,8 +69,8 @@ h2 {
     margin: 20px;
     border: solid;
     border-radius: 5px;
-    width: 80px;
-    height: 30px;
+    width: 100px;
+    height: 50px;
     background-color: black;
     text-transform: uppercase;
     color: white;
@@ -82,8 +82,8 @@ h2 {
     margin: 20px;
     border: solid;
     border-radius: 5px;
-    width: 80px;
-    height: 30px;
+    width: 100px;
+    height: 50px;
     background-color: black;
     text-transform: uppercase;
     color: white;
@@ -97,6 +97,14 @@ h2 {
 
 .hide {
     display: none;
+}
+
+.correct {
+    background: #FF7F7F;
+}
+
+.incorrect {
+    background: #90EE90;
 }
 
 /*--------Score area style*/

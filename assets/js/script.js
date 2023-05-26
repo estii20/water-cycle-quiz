@@ -1,6 +1,4 @@
 //function displayScore()
-//function nextQuestion()
-//function resetQuiz()
 //function incrementCorrectAnswer()
 //function incrementIncorrectAnswer()
 
@@ -13,10 +11,6 @@ const buttonsAnswer = document.getElementById("answer-btns");
 const buttonNext = document.getElementById("next-button");
 const scoreCorrectElement = document.getElementById("score-correct");
 const scoreIncorrectElement = document.getElementById("score-incorrect");
-
-document.addEventListener("DomContentLoaded", function (event) {
-    startButton();
-});
 
 startButton.addEventListener("click", beginQuiz);
     startButton.innerHTML = "Start Quiz";
@@ -57,8 +51,8 @@ function displayQuestion() {
     questionShown.answers.forEach(answer => {
         const button = document.createElement("button");
         button.classList.add("btns");
-        if (answer.true){
-            button.dataset.true = answer.true
+        if (answer.correct){
+            button.dataset.correct = answer.correct
         }
         button.addEventListener("click", selectAnswer);
         buttonsAnswer.appendChild(button);
@@ -73,6 +67,42 @@ function resetQuiz() {
         buttonsAnswer.removeChild(buttonsAnswer.firstChild);
     }
 }
+
+//Selects the correct answer from the question array and adds the class of correct and incorrect
+
+function selectAnswer(e) {
+    const btnSelected = e.target
+    const correct = btnSelected.dataset.correct === "true";
+    if (correct) {
+        btnSelected.classList.add("correct");
+        score++;
+    }else{
+        btnSelected.classList.add("incorrect");
+    }
+    Array.from(buttonsAnswer.children).forEach(button => {
+        if(button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+        button.disabled = "true";
+    });
+    buttonNext.style.display = "block";
+}
+
+//Displays the next question in the question array until the end when the score is shown
+
+function nextQuestion(){
+    if(questionList < questions.length) {
+        displayQuestion();
+    }else{
+        displayScore();
+    }
+}
+
+buttonNext.addEventListener("click", ()=> {
+    if(questionList < questions.length) {
+        nextQuestion();
+    }
+})
 
 //Start quiz
 
