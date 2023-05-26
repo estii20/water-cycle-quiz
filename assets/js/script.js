@@ -16,9 +16,17 @@ const buttonNext = document.getElementById("next-button");
 const scoreCorrectElement = document.getElementById("score-correct");
 const scoreIncorrectElement = document.getElementById("score-incorrect");
 
+document.addEventListener("DomContentLoaded", function (event) {
+    startButton();
+});
+
 startButton.addEventListener("click", beginQuiz);
-    startButton.innerHTML = "Start";
+    startButton.innerHTML = "Start Quiz";
     alert("Lets go!");
+    quizPanelElement.classList.add("hide");
+    questionOption.classList.add("hide");
+    buttonNext.classList.add("hide");
+    
 
 //Store question index and score
 
@@ -29,7 +37,7 @@ let scoreIncorrect = 0;
 
 //Starts quiz with the first question and displays next button
 
-function beginQuiz(){
+function beginQuiz() {
     questionList = 0;
     score = 0;
     scoreCorrect = 0;
@@ -40,12 +48,12 @@ function beginQuiz(){
 
 //Iterate the questions array and displays each in order
 
-function displayQuestion(){
+function displayQuestion() {
     let questionShown = questions[questionList];
     let nextQuestionShown = questionList + 1;
     questionOption.innerHTML = nextQuestionShown + ". " + questionShown.question;
 }
-    
+
 
 
 
@@ -53,7 +61,7 @@ function displayQuestion(){
 
 const questions = [
     {
-        question: "1. What happens when clouds get too heavy to hold water?",
+        question: "What happens when clouds get too heavy to hold water?",
         answers: [
             { text: "The water falls to the ground", correct: true },
             { text: "The water evaporates", correct: false },
@@ -62,7 +70,7 @@ const questions = [
         ]
     },
     {
-        question: "2. Where on Earth is the water the purist?",
+        question: "Where on Earth is the water the purist?",
         answers: [
             { text: "Rivers and streams", correct: false },
             { text: "Sulphur springs", correct: false },
@@ -71,7 +79,7 @@ const questions = [
         ]
     },
     {
-        question: "3. When digging a well looking for water what do you find?",
+        question: "When digging a well looking for water what do you find?",
         answers: [
             { text: "An underground river", correct: false },
             { text: "An underground aquifer", correct: true },
@@ -80,7 +88,7 @@ const questions = [
         ]
     },
     {
-        question: "4. What turns water on the Earth into vapour?",
+        question: "What turns water on the Earth into vapour?",
         answers: [
             { text: "The moon", correct: false },
             { text: "Global warming", correct: false },
@@ -89,7 +97,7 @@ const questions = [
         ]
     },
     {
-        question: "5. What is NOT part of the water cycle?",
+        question: "What is NOT part of the water cycle?",
         answers: [
             { text: "Collection", correct: false },
             { text: "Evaporation", correct: false },
@@ -98,7 +106,7 @@ const questions = [
         ]
     },
     {
-        question: "6. Why is the ocean salty?",
+        question: "Why is the ocean salty?",
         answers: [
             { text: "Groundwater picks up salt and minerals", correct: true },
             { text: "From the skin of sea life animals", correct: false },
@@ -107,7 +115,7 @@ const questions = [
         ]
     },
     {
-        question: "8. How old could the water be in glaciers?",
+        question: "How old could the water be in glaciers?",
         answers: [
             { text: "Billions of years", correct: false },
             { text: "Thousands of years", correct: false },
@@ -116,7 +124,7 @@ const questions = [
         ]
     },
     {
-        question: "8. How old could the water be in glaciers?",
+        question: "How old could the water be in glaciers?",
         answers: [
             { text: "Billions of years", correct: false },
             { text: "Thousands of years", correct: false },
@@ -125,7 +133,7 @@ const questions = [
         ]
     },
     {
-        question: "9. Water that soaks into the ground is called what?",
+        question: "Water that soaks into the ground is called what?",
         answers: [
             { text: "Water table", correct: false },
             { text: "Collected", correct: false },
@@ -134,7 +142,7 @@ const questions = [
         ]
     },
     {
-        question: "2. Where on Earth is the water the purist?",
+        question: "Where on Earth is the water the purist?",
         answers: [
             { text: "Rivers and streams", correct: false },
             { text: "Sulphur springs", correct: false },
@@ -143,7 +151,7 @@ const questions = [
         ]
     },
     {
-        question: "10. What is it called when water is turned into a vapour?",
+        question: "What is it called when water is turned into a vapour?",
         answers: [
             { text: "Precipitation", correct: false },
             { text: "Evaporation", correct: true },
@@ -152,7 +160,7 @@ const questions = [
         ]
     },
     {
-        question: "11. What do we call fresh water falling to the Earth?",
+        question: "What do we call fresh water falling to the Earth?",
         answers: [
             { text: "Precipitation", correct: true },
             { text: "Evaporation", correct: false },
@@ -161,7 +169,7 @@ const questions = [
         ]
     },
     {
-        question: "12. What is condensation in the atmosphere called?",
+        question: "What is condensation in the atmosphere called?",
         answers: [
             { text: "Lightning", correct: false },
             { text: "Hurricanes", correct: false },
@@ -170,7 +178,7 @@ const questions = [
         ]
     },
     {
-        question: "13. What is a solid state of water called?",
+        question: "What is a solid state of water called?",
         answers: [
             { text: "Steam", correct: false },
             { text: "Ice", correct: true },
@@ -179,7 +187,7 @@ const questions = [
         ]
     },
     {
-        question: "14. What does this steam contain?",
+        question: "What does this steam contain?",
         answers: [
             { text: "Gas and water", correct: true },
             { text: "Water", correct: false },
@@ -188,7 +196,7 @@ const questions = [
         ]
     },
     {
-        question: "15. What happens to water vapour when it cools?",
+        question: "What happens to water vapour when it cools?",
         answers: [
             { text: "It transpires", correct: false },
             { text: "It precipitates", correct: false },
