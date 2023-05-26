@@ -1,4 +1,3 @@
-//function displayScore()
 //function incrementCorrectAnswer()
 //function incrementIncorrectAnswer()
 
@@ -11,6 +10,8 @@ const buttonsAnswer = document.getElementById("answer-btns");
 const buttonNext = document.getElementById("next-button");
 const scoreCorrectElement = document.getElementById("score-correct");
 const scoreIncorrectElement = document.getElementById("score-incorrect");
+
+//Starts the quiz and only shows the start button
 
 startButton.addEventListener("click", beginQuiz);
     startButton.innerHTML = "Start Quiz";
@@ -30,7 +31,6 @@ let scoreIncorrect = 0;
 //Starts quiz with the first question and displays next button
 
 function beginQuiz() {
-    questionList = 0;
     score = 0;
     scoreCorrect = 0;
     scoreIncorrect = 0;
@@ -85,10 +85,19 @@ function selectAnswer(e) {
         }
         button.disabled = "true";
     });
-    buttonNext.style.display = "block";
+    buttonNext.style.display = "inline-block";
 }
 
-//Displays the next question in the question array until the end when the score is shown
+//Displays the score to the user at the end of the questions array
+
+function displayScore() {
+    resetQuiz();
+    questionOption.innerHTML = `Well done you scored $(score) out of 15!`;
+    buttonNext.innerHTML = "Restart";
+    buttonNext.style.display = "inline-block";
+}
+
+//Displays the next question in the questions array until the end when the score is shown
 
 function nextQuestion(){
     if(questionList < questions.length) {
