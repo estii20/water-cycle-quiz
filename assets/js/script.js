@@ -65,15 +65,6 @@ const questions = [
         ]
     },
     {
-        question: "How old could the water be in glaciers?",
-        answers: [
-            { text: "Billions of years", correct: false },
-            { text: "Thousands of years", correct: false },
-            { text: "Millions of years", correct: true },
-            { text: "Hundreds of years", correct: false },
-        ]
-    },
-    {
         question: "Water that soaks into the ground is called what?",
         answers: [
             { text: "Water table", correct: false },
@@ -225,7 +216,7 @@ function resetQuiz() {
  * Selects the correct answer from the question array and 
  * adds the class of correct and incorrect and increments the old score
  * and disables the button when correct answer selected,
- * then display next button
+ * then display the next button
  */
 
 function selectAnswer(e) {
@@ -262,7 +253,6 @@ function incrementIncorrectAnswer() {
     document.getElementById("score-incorrect").innerText = ++oldScore;
 }
 
-
 /**
  * Displays the score to the user at the end of the 
  * questions array and restarts the quiz
@@ -270,7 +260,7 @@ function incrementIncorrectAnswer() {
 
 function displayScore() {
     resetQuiz();
-    questionOption.innerHTML = `Well done you scored $(score) out of 15!`;
+    questionOption.innerHTML = `Well done you scored ${score} out of 15!`;
     buttonNext.innerHTML = "Restart";
     buttonNext.style.display = "inline-block";
 }
@@ -280,7 +270,7 @@ function displayScore() {
  * array until the end when the score is shown
  */
 
-function nextQuestion(){
+function nextQuestion() {
     questionList++;
     if(questionList < questions.length) {
         displayQuestion();
