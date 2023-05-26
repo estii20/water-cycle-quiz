@@ -1,5 +1,3 @@
-//function displayQuestion()
-//function selectAnswer()
 //function displayScore()
 //function nextQuestion()
 //function resetQuiz()
@@ -49,17 +47,31 @@ function beginQuiz() {
 //Iterate the questions array and displays each in order
 
 function displayQuestion() {
+    resetQuiz();
     let questionShown = questions[questionList];
     let nextQuestionShown = questionList + 1;
     questionOption.innerHTML = nextQuestionShown + ". " + questionShown.question;
 
-    //Create buttons to display the answers
+    //Create buttons to display the answers and removes the answer buttons in html
 
     questionShown.answers.forEach(answer => {
         const button = document.createElement("button");
         button.classList.add("btns");
-        buttonsAnswer.appendChild(button); 
+        if (answer.true){
+            button.dataset.true = answer.true
+        }
+        button.addEventListener("click", selectAnswer);
+        buttonsAnswer.appendChild(button);
     });
+}
+
+//Resets the quiz to the default
+
+function resetQuiz() {
+    buttonNext.style.display = "none";
+    while(buttonsAnswer.firstChild) {
+        buttonsAnswer.removeChild(buttonsAnswer.firstChild);
+    }
 }
 
 //Start quiz
