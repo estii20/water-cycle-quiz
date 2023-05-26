@@ -78,7 +78,7 @@ h2 {
 }
 
 #next-button {
-    display: none;
+    display: inline-block;
     margin: 20px;
     border: solid;
     border-radius: 5px;
@@ -100,11 +100,11 @@ h2 {
 }
 
 .correct {
-    background: #FF7F7F;
+    background: #90EE90;
 }
 
 .incorrect {
-    background: #90EE90;
+    background: #FF7F7F;
 }
 
 /*--------Score area style*/
@@ -116,6 +116,17 @@ h2 {
 #score-correct {
     display: inline-block;
     background: white;
+    margin: 4px;
+    border: solid;
+    border-radius: 8px;
+    width: 40px;
+    padding: 5px;
+    color: green;
+}
+
+#correct {
+    display: inline-block;
+    background: white;
     border: solid;
     border-radius: 8px;
     padding: 5px;
@@ -123,6 +134,17 @@ h2 {
 }
 
 #score-incorrect {
+    display: inline-block;
+    background: white;
+    margin: 4px;
+    border: solid;
+    border-radius: 8px;
+    width: 40px;
+    padding: 5px;
+    color: red;
+}
+
+#incorrect {
     display: inline-block;
     background: white;
     border: solid;

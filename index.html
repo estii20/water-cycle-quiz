@@ -11,26 +11,31 @@
 <body>
 
     <!--quiz area-->
+
     <div class="quiz-panel">
         
         <div class="quiz-area" id="quiz">
             <h1><i class="fa-solid fa-cloud-showers-water"></i> The Water Cycle Quiz</h1>
-            <h2 id="question">Questions</h2><p> out of 15</p>
+            <h2 id="question">Questions</h2>
             <div id="answer-btns">
                 <button class="btns">A</button>
                 <button class="btns">B</button>
                 <button class="btns">C</button>
                 <button class="btns">D</button>
             </div>
-            <button id="start-button">Start</button>
-            <button id="next-button">Next</button>
+
+    <!--controls area-->
+
+            <button id="start-button" class="hide">Start</button>
+            <button id="next-button" class="hide">Next</button>
         </div>
     </div>
 
     <!--score area-->
+
     <div id="score">
-        <p class="scores" id="score-correct">0 <i class="fa-solid fa-check"></i> Correct</p>
-        <p class="scores" id="score-incorrect">0 <i class="fa-solid fa-circle-xmark"></i> Incorrect</p>
+        <p class="scores" id="score-correct">0 </p><span id="correct"><i class="fa-solid fa-check"></i> Correct</span>
+        <p class="scores" id="score-incorrect">0 </p><span id="incorrect"><i class="fa-solid fa-circle-xmark"></i> Incorrect</span>
     </div>
 
     <script src="assets/js/script.js"></script>

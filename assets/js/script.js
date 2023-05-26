@@ -1,145 +1,3 @@
-//Quiz area variables
-
-const quizPanelElement = document.getElementsByClassName("quiz-panel");
-const startButton = document.getElementById("start-button");
-const questionOption = document.getElementById("question");
-const buttonsAnswer = document.getElementById("answer-btns");
-const buttonNext = document.getElementById("next-button");
-const scoreCorrectElement = document.getElementById("score-correct");
-const scoreIncorrectElement = document.getElementById("score-incorrect");
-
-//Starts the quiz and only shows the start button
-
-startButton.addEventListener("click", beginQuiz);
-    startButton.innerHTML = "Start Quiz";
-    alert("Lets go!");
-    quizPanelElement.classList.add("hide");
-    questionOption.classList.add("hide");
-    buttonNext.classList.add("hide");
-    
-
-//Store question index and score
-
-let questionList = 0;
-let score = 0;
-let scoreCorrect = 0;
-let scoreIncorrect = 0;
-
-//Starts quiz with the first question and displays next button
-
-function beginQuiz() {
-    score = 0;
-    scoreCorrect = 0;
-    scoreIncorrect = 0;
-    buttonNext.innerHTML = "Next Question";
-    displayQuestion();
-}
-
-//Iterate the questions array and displays each in order
-
-function displayQuestion() {
-    resetQuiz();
-    let questionShown = questions[questionList];
-    let nextQuestionShown = questionList + 1;
-    questionOption.innerHTML = nextQuestionShown + ". " + questionShown.question;
-
-    //Create buttons to display the answers and removes the answer buttons in html
-
-    questionShown.answers.forEach(answer => {
-        const button = document.createElement("button");
-        button.classList.add("btns");
-        if (answer.correct){
-            button.dataset.correct = answer.correct
-        }
-        button.addEventListener("click", selectAnswer);
-        buttonsAnswer.appendChild(button);
-    });
-}
-
-//Resets the quiz to the default
-
-function resetQuiz() {
-    buttonNext.style.display = "none";
-    while(buttonsAnswer.firstChild) {
-        buttonsAnswer.removeChild(buttonsAnswer.firstChild);
-    }
-}
-
-//Gets the current score and increments it by 1
-
-function incrementCorrectAnswer() {
-    let oldScore = parseInt(document.getElementById("score-correct").innerText);
-    document.getElementById("score-correct").innerText=++oldScore;
-}
-
-//Gets the current score and increments it by 1
-
-function incrementIncorrectAnswer() {
-    let oldScore = parseInt(document.getElementById("score-incorrect").innerText);
-    document.getElementById("score-incorrect").innerText = ++oldScore;
-}
-
-/**
- * Selects the correct answer from the question array and 
- * adds the class of correct and incorrect and increments the old score
- */
-
-function selectAnswer(e) {
-    const btnSelected = e.target
-    const correct = btnSelected.dataset.correct === "true";
-    if (correct) {
-        btnSelected.classList.add("correct");
-        score++;
-        incrementCorrectAnswer();
-    }else{
-        btnSelected.classList.add("incorrect");
-        incrementIncorrectAnswer();
-    }
-    Array.from(buttonsAnswer.children).forEach(button => {
-        if(button.dataset.correct === "true") {
-            button.classList.add("correct");
-        }
-        button.disabled = "true";
-    });
-    buttonNext.style.display = "inline-block";
-}
-
-/**
- * Displays the score to the user at the end of the 
- * questions array and restarts the quiz
- */
-
-function displayScore() {
-    resetQuiz();
-    questionOption.innerHTML = `Well done you scored $(score) out of 15!`;
-    buttonNext.innerHTML = "Restart";
-    buttonNext.style.display = "inline-block";
-}
-
-/**
- * Displays the next question in the questions 
- * array until the end when the score is shown
- */
-
-function nextQuestion(){
-    if(questionList < questions.length) {
-        displayQuestion();
-    }else{
-        displayScore();
-    }
-}
-
-buttonNext.addEventListener("click", ()=> {
-    if(questionList < questions.length) {
-        nextQuestion();
-    }
-})
-
-//Start quiz
-
-beginQuiz();
-
-
 //quiz questions and answers array 15 in total displayed in order
 
 const questions = [
@@ -289,4 +147,158 @@ const questions = [
     },
 
 ];
+
+//Quiz area variables
+
+const quizPanelElement = document.getElementsByClassName("quiz-panel");
+const startButton = document.getElementById("start-button");
+const questionOption = document.getElementById("question");
+const buttonsAnswer = document.getElementById("answer-btns");
+const buttonNext = document.getElementById("next-button");
+
+//Score area variables
+
+const scoreCorrectElement = document.getElementById("score-correct");
+const scoreIncorrectElement = document.getElementById("score-incorrect");
+
+//Starts the quiz and only shows the start button
+
+document.addEventListener("DomContentLoaded", function (event) {
+    startButton();
+    });
+
+    startButton.addEventListener("click", beginQuiz);
+    startButton.innerHTML = "Start Quiz";
+    
+
+//Store question index and score
+
+let questionList = 0;
+let score = 0;
+let scoreCorrect = 0;
+let scoreIncorrect = 0;
+
+//Starts quiz with the first question and displays next button
+
+function beginQuiz() {
+    score = 0;
+    scoreCorrect = 0;
+    scoreIncorrect = 0;
+    buttonNext.innerHTML = "Next Question";
+    displayQuestion();
+}
+
+//Iterate the questions array and displays each in order
+
+function displayQuestion() {
+    resetQuiz();
+    startButton.style.display = "none";
+    let questionShown = questions[questionList];
+    let nextQuestionShown = questionList + 1;
+    questionOption.innerHTML = nextQuestionShown + ". " + questionShown.question;
+
+
+    //Create buttons to display the answers and removes the answer buttons in html
+
+    questionShown.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btns");
+        if(answer.correct){
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener("click", selectAnswer);
+        buttonsAnswer.appendChild(button);
+    });
+};
+
+//Resets the quiz to the default
+
+function resetQuiz() {
+    buttonNext.style.display = "none";
+    while(buttonsAnswer.firstChild) {
+        buttonsAnswer.removeChild(buttonsAnswer.firstChild);
+    }
+}
+
+/**
+ * Selects the correct answer from the question array and 
+ * adds the class of correct and incorrect and increments the old score
+ * and disables the button when correct answer selected,
+ * then display next button
+ */
+
+function selectAnswer(e) {
+    const btnSelected = e.target
+    const correct = btnSelected.dataset.correct === "true";
+    if(correct) {
+        btnSelected.classList.add("correct");
+        score++;
+        incrementCorrectAnswer();
+    }else{
+        btnSelected.classList.add("incorrect");
+        incrementIncorrectAnswer();
+    }
+    Array.from(buttonsAnswer.children).forEach(button => {
+        if(button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+        button.disabled = "true";
+    });
+    buttonNext.style.display = "inline-block";
+}
+
+//Gets the current score and increments it by 1
+
+function incrementCorrectAnswer() {
+    let oldScore = parseInt(document.getElementById("score-correct").innerText);
+    document.getElementById("score-correct").innerText=++oldScore;
+}
+
+//Gets the current score and increments it by 1
+
+function incrementIncorrectAnswer() {
+    let oldScore = parseInt(document.getElementById("score-incorrect").innerText);
+    document.getElementById("score-incorrect").innerText = ++oldScore;
+}
+
+
+/**
+ * Displays the score to the user at the end of the 
+ * questions array and restarts the quiz
+ */
+
+function displayScore() {
+    resetQuiz();
+    questionOption.innerHTML = `Well done you scored $(score) out of 15!`;
+    buttonNext.innerHTML = "Restart";
+    buttonNext.style.display = "inline-block";
+}
+
+/**
+ * Displays the next question in the questions 
+ * array until the end when the score is shown
+ */
+
+function nextQuestion(){
+    questionList++;
+    if(questionList < questions.length) {
+        displayQuestion();
+    }else{
+        displayScore();
+    }
+}
+
+buttonNext.addEventListener("click", ()=> {
+    if(questionList < questions.length) {
+        nextQuestion();
+    }else{
+        beginQuiz();
+    }
+});
+
+
+
+
+
 
