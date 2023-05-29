@@ -13,9 +13,11 @@ The process begins again.
 
 ## Portfolio Project 2 - Estelle Specht
 
-![Link] (https://ui.dev/amiresponsive?url=https://estii20.github.io/water-cycle-quiz/)
-Project Repository github link ![Github Link](https://github.com/estii20/water-cycle-quiz)
-![Live Site](https://estii20.github.io/water-cycle-quiz/)
+- [Water Cycle Quiz Link](https://ui.dev/amiresponsive?url=https://estii20.github.io/water-cycle-quiz/)
+
+- [Github Link](https://github.com/estii20/water-cycle-quiz)
+
+- [Live Site](https://estii20.github.io/water-cycle-quiz/)
 
 ## Table of contents
 
@@ -48,7 +50,7 @@ __Score Area__
 
 Documents the number of questions correct and incorrect.
 
-#### Aims
+### Aims
 
 - Offer children the opportunity to practise their knowledge.
 - Support teachers in explaining the concepts and testing students.
@@ -56,65 +58,65 @@ Documents the number of questions correct and incorrect.
 - Help children with different learning styles a different way of understanding the water cycle.
 - Give teachers a tool to know what the children understand.
 
-#### Skeleton
+### Skeleton
 
-Webpage and mobile version made using a wireframe tool on ![Figma](https://www.figma.com/)
+Webpage and mobile version made using a wireframe tool on [Figma](https://www.figma.com/)
 
-#### Surface
+### Surface
 
 To create a clear visual platform for the quiz game, that is attractive to young players.
 
-#### Background color
+### Background color
 
 The main background is a linear gradient to complement the background image 
-The Chrome extension tool ![eyedropper tool Chrome extension](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka?hl=pt) was used to pick out the main three colors for the background.
+The Chrome extension tool [eyedropper tool Chrome extension](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka?hl=pt) was used to pick out the main three colors for the background.
 The green color of `#79caff`, the beige color of `#e4e170` and the blue color of `#1a913d`. 
 The buttons have a background color of `#f5f5f5` a whitesmoke color to provide a contrast to the text without being as harsh on the eyes as white.
 The hover color used for the buttons is also `#e4e170`, to give a cohesive visual. 
 
 The quiz area background uses the background image of hills and sky to complement the subject of the water cycle.
 
-![Colorspace](https://mycolor.space/) used to check the palette works together.
+[Colorspace](https://mycolor.space/) used to check the palette works together.
 
-#### Font color
+### Font color
 
 The heading and logo are `#f5f5f5` to create a contrast to the background blue and the main text content.
 
 The body font used is the charcoal font-color `#3a3a3a` to add contrast to the background color.
 
-#### Fonts
+### Fonts
 
 - The font Poppins used throughout to give a clean look for the user.
 - Used [fontjoy](https://fontjoy.com/) to find the font for the logo and headings.
 - Fonts imported from [Google Fonts](https://fonts.google.com/).
 - [Font Awesome](https://fontawesome.com/) used to add visual cues to the Logo and score area.
 
-### Features
+## Features
 
-#### Quiz area
+### Quiz area
 
 - Header with Logo 
 - Question area with fifteen questions, four option buttons with three incorrect answers and one correct answer and a start button. As the player moves through the game there is a next button.
 - Score area with the number of answers correct/incorrect.
 
-##### Header
+### Header
 
 The heading section has a Logo with font awesome image of clouds, rain and sea.
 
-##### Quiz Area
+### Quiz Area
 
 Features the water cycle questions and the answers. Responds if the player is correct or incorrect, by highlighting the correct answer button as green and the wrong anser button selected as red.
 
-##### Score
+### Score
 
 Lets the player tally the number of questions they have correctly or incorrectly answered.
 
 
-### Future Features
+## Future Features
 
 It would be helpful in the future to increase the number of questions and provide a random question function.
 
-### Technology Used
+## Technology Used
 
 __HTML__
 
@@ -140,7 +142,7 @@ The entire website used Google Fonts, with font joy helping to find a suitable f
 
 __Chrome Eye Dropper Extension__
 
-![eyedropper tool Chrome extension](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka?hl=pt)To find the colors for the fonts and background colors from the main background image.
+[eyedropper tool Chrome extension](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka?hl=pt)To find the colors for the fonts and background colors from the main background image.
 
 Sans-serif used as an alternative in case of issues viewing on different browsers.
 
@@ -151,15 +153,15 @@ To change images from jpeg to webp available at
 
 __Image Resizer__
 
-![Image Resizer](https://www.simpleimageresizer.com/upload) to resize the background image used for the quiz area.
+[Image Resizer](https://www.simpleimageresizer.com/upload) to resize the background image used for the quiz area.
 
 __Wireframes__
 
-![Figma](https://www.figma.com/) to design the arrangement of the site.
+[Figma](https://www.figma.com/) to design the arrangement of the site.
 
 __Colorspace__
 
-![Colorspace](https://mycolor.space/) used to check the palette works together.
+[Colorspace](https://mycolor.space/) used to check the palette works together.
 
 
 
