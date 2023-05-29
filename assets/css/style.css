@@ -125,6 +125,7 @@ h2 {
     border: solid;
     border-radius: 8px;
     width: 40px;
+    height: max-content;
     padding: 5px;
     color: green;
 }
@@ -145,6 +146,7 @@ h2 {
     border: solid;
     border-radius: 8px;
     width: 40px;
+    height: max-content;
     padding: 5px;
     color: red;
 }
@@ -162,4 +164,41 @@ h2 {
     padding: 10px;
     width: 200px;
     height: 40px;
+}
+
+/* For small screens sizes from 510px wide and down */
+@media screen and (max-width: 510px) {
+
+    * {
+        font-size: 90%;
+    }
+
+    body {
+        height: 110%;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    #quiz {
+        margin: 0;
+        height: 90%;
+    }
+
+    #start-button, #next-button {
+        display: inline-grid;
+        margin: 0;
+        width: 50px;
+        height: 30px;
+    }
+
+    .btns {
+        margin: 5px;
+        font-size: small;
+    }
 }
