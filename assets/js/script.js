@@ -159,8 +159,8 @@ document.addEventListener("DomContentLoaded", function (event) {
     });
 
     startButton.addEventListener("click", beginQuiz);
-    startButton.innerHTML = "Start Quiz";
-    
+    startButton.innerHTML = "Start";
+    buttonNext.classList.add("hide");
 
 //Store question index and score
 
@@ -176,6 +176,8 @@ function beginQuiz() {
     scoreCorrect = 0;
     scoreIncorrect = 0;
     buttonNext.innerHTML = "Next Question";
+    startButton.classList.add("hide");
+    buttonsAnswer.classList.remove("hide");
     displayQuestion();
 }
 
@@ -196,17 +198,18 @@ function displayQuestion() {
         button.innerHTML = answer.text;
         button.classList.add("btns");
         if(answer.correct){
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
         }
         button.addEventListener("click", selectAnswer);
         buttonsAnswer.appendChild(button);
     });
-};
+}
 
 //Resets the quiz to the default
 
 function resetQuiz() {
     buttonNext.style.display = "none";
+    startButton.classList.remove("hide");
     while(buttonsAnswer.firstChild) {
         buttonsAnswer.removeChild(buttonsAnswer.firstChild);
     }
@@ -220,7 +223,7 @@ function resetQuiz() {
  */
 
 function selectAnswer(e) {
-    const btnSelected = e.target
+    const btnSelected = e.target;
     const correct = btnSelected.dataset.correct === "true";
     if(correct) {
         btnSelected.classList.add("correct");
@@ -261,8 +264,8 @@ function incrementIncorrectAnswer() {
 function displayScore() {
     resetQuiz();
     questionOption.innerHTML = `Well done you scored ${score} out of 15!`;
-    buttonNext.innerHTML = "Restart";
-    buttonNext.style.display = "inline-block";
+    startButton.innerHTML = "Restart";
+    startButton.style.display = "inline-block";
 }
 
 /**
