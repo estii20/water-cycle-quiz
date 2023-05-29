@@ -154,13 +154,14 @@ const scoreIncorrectElement = document.getElementById("score-incorrect");
 
 //Starts the quiz and only shows the start button
 
-document.addEventListener("DomContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", function (event) {
     startButton();
     });
 
     startButton.addEventListener("click", beginQuiz);
     startButton.innerHTML = "Start";
     buttonNext.classList.add("hide");
+
 
 //Store question index and score
 
@@ -172,10 +173,11 @@ let scoreIncorrect = 0;
 //Starts quiz with the first question and displays next button
 
 function beginQuiz() {
+    questionList = 0;
     score = 0;
     scoreCorrect = 0;
     scoreIncorrect = 0;
-    buttonNext.innerHTML = "Next Question";
+    buttonNext.innerHTML = "Next";
     startButton.classList.add("hide");
     buttonsAnswer.classList.remove("hide");
     displayQuestion();
