@@ -1,39 +1,166 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Water Cycle Quiz
 
-Welcome,
+A quiz to test the key concepts of the water cycle for primary school children, KS2 aged between 7 and 11 years. A fun way to put into practice what the children have learnt in class. An online quiz format is more interactive for children and suits visual learners in particular. Ideal for students and teachers who learn and teach remotely.
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This quiz asks questions about the water cycle namely; evaporation, condensation, precipitation and ground runoff.
+The questions will test the knowledge of how Water is recycled in a process called the water cycle. 
+Evaporation - water in the sea rises as vapour into the sky. 
+Condensation - droplets form and become clouds. 
+Rain (precipitation) falls onto the ground from clouds. 
+Water runs off the land until it reaches a river. 
+Water moves  along the river and into the sea.
+The process begins again.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **May 11th, 2023**
+## Portfolio Project 2 - Estelle Specht
 
-## Codeanywhere Reminders
+![Link] (https://ui.dev/amiresponsive?url=https://estii20.github.io/water-cycle-quiz/)
+Project Repository github link ![Github Link](https://github.com/estii20/water-cycle-quiz)
+![Live Site](https://estii20.github.io/water-cycle-quiz/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Table of contents
 
-`python3 -m http.server`
+1. UX design
+2. Features
+3. Future Features
+4. Technology used
+5. Accessibility
+6. Testing
+7. Deployment
+8. Credits
+9. Acknowledgements
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### UX Design
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+To attract children to learn and interact with the information they have learnt at school.
+A background picture of land and sky to give a bright and enticing look to the quiz.
 
-`http_server`
+__Header - Logo__
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Font Awesome logo taken to show the clouds, water and sea. Represents the subject matter.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+__Question Area__
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+There are fifteen questions available.
+As the player moves through the questions, there is a notification on which question they are on and how many questions are left to complete.
+Answer correct, response well done and incorrect answer notification with the correct answer displayed.
 
-To log into the Heroku toolbelt CLI:
+__Score Area__
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Documents the number of questions correct and incorrect.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+#### Aims
 
----
+- Offer children the opportunity to practise their knowledge.
+- Support teachers in explaining the concepts and testing students.
+- Provide a fun learning tool which children enjoy learning.
+- Help children with different learning styles a different way of understanding the water cycle.
+- Give teachers a tool to know what the children understand.
 
-Happy coding!
+#### Skeleton
+
+Webpage and mobile version made using a wireframe tool on ![Figma](https://www.figma.com/)
+
+#### Surface
+
+To create a clear visual platform for the quiz game, that is attractive to young players.
+
+#### Background color
+
+The main background is a linear gradient to complement the background image 
+The Chrome extension tool ![eyedropper tool Chrome extension](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka?hl=pt) was used to pick out the main three colors for the background.
+The green color of `#79caff`, the beige color of `#e4e170` and the blue color of `#1a913d`. 
+The buttons have a background color of `#f5f5f5` a whitesmoke color to provide a contrast to the text without being as harsh on the eyes as white.
+The hover color used for the buttons is also `#e4e170`, to give a cohesive visual. 
+
+The quiz area background uses the background image of hills and sky to complement the subject of the water cycle.
+
+![Colorspace](https://mycolor.space/) used to check the palette works together.
+
+#### Font color
+
+The heading and logo are `#f5f5f5` to create a contrast to the background blue and the main text content.
+
+The body font used is the charcoal font-color `#3a3a3a` to add contrast to the background color.
+
+#### Fonts
+
+- The font Poppins used throughout to give a clean look for the user.
+- Used [fontjoy](https://fontjoy.com/) to find the font for the logo and headings.
+- Fonts imported from [Google Fonts](https://fonts.google.com/).
+- [Font Awesome](https://fontawesome.com/) used to add visual cues to the Logo and score area.
+
+### Features
+
+#### Quiz area
+
+- Header with Logo 
+- Question area with fifteen questions, four option buttons with three incorrect answers and one correct answer and a start button. As the player moves through the game there is a next button.
+- Score area with the number of answers correct/incorrect.
+
+##### Header
+
+The heading section has a Logo with font awesome image of clouds, rain and sea.
+
+##### Quiz Area
+
+Features the water cycle questions and the answers. Responds if the player is correct or incorrect, by highlighting the correct answer button as green and the wrong anser button selected as red.
+
+##### Score
+
+Lets the player tally the number of questions they have correctly or incorrectly answered.
+
+
+### Future Features
+
+It would be helpful in the future to increase the number of questions and provide a random question function.
+
+### Technology Used
+
+__HTML__
+
+Provides structure to the content.
+
+__CSS__
+
+Provides style to the content and user accessibility. Media queries to adjust to
+different screen sizes.
+
+__JavaScript__
+
+The language used to add interactivity to the quiz.
+
+__Font Awesome__
+
+[Font Awesome](https://fontawesome.com/)
+Provides visual cues to the user and is used for the correct/incorrect answer icons.
+
+__Google Fonts__
+
+The entire website used Google Fonts, with font joy helping to find a suitable font.
+
+__Chrome Eye Dropper Extension__
+
+![eyedropper tool Chrome extension](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka?hl=pt)To find the colors for the fonts and background colors from the main background image.
+
+Sans-serif used as an alternative in case of issues viewing on different browsers.
+
+__Convertio__
+
+To change images from jpeg to webp available at
+[Convertio](https://convertio.co/download/66c2e566ed18555e5e989956c82474de81cdf7/)
+
+__Image Resizer__
+
+![Image Resizer](https://www.simpleimageresizer.com/upload) to resize the background image used for the quiz area.
+
+__Wireframes__
+
+![Figma](https://www.figma.com/) to design the arrangement of the site.
+
+__Colorspace__
+
+![Colorspace](https://mycolor.space/) used to check the palette works together.
+
+
+
+
