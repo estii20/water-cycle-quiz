@@ -36,6 +36,7 @@ h2 {
 
 #quiz {
     background-image: url('../images/landscape_600x400.webp');
+    height: 500px;
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
