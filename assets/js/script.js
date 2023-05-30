@@ -233,7 +233,7 @@ function resetQuiz() {
 /**
  * Select the answer from the four answer options in the question array
  * add the class of correct and incorrect and increment the old score by 1
- * disable the answer buttons when correct answer selected,
+ * disable the answer buttons when answer selected,
  * display the next button
  */
 
@@ -264,7 +264,7 @@ function selectAnswer(e) {
 
 function incrementCorrectAnswer() {
     let oldScore = parseInt(document.getElementById("score-correct").innerText);
-    document.getElementById("score-correct").innerText=++oldScore;
+    document.getElementById("score-correct").innerText = ++oldScore;
 }
 
 /**
