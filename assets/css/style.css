@@ -65,6 +65,8 @@ h2 {
     font-size: 18px;
 }
 
+/*disbale the hover function once an answer is selected*/
+
 .btns:hover:not([disabled]) {
     background-color: #e4e170;
     transition: 0.3s;

@@ -1,4 +1,4 @@
-//quiz questions and answers array 15 in total displayed in order
+//quiz questions array 15 in total displayed in order
 
 const questions = [
     {
@@ -152,16 +152,16 @@ const buttonNext = document.getElementById("next-button");
 const scoreCorrectElement = document.getElementById("score-correct");
 const scoreIncorrectElement = document.getElementById("score-incorrect");
 
-//Starts the quiz and only shows the start button
+/**
+ * DOM fully loaded and parsed
+ * Start the quiz on click of start button
+ * show the start button and score area
+ */
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    startButton();
-    });
-
     startButton.addEventListener("click", beginQuiz);
     startButton.innerHTML = "Start";
-    buttonNext.classList.add("hide");
-
+});
 
 //Store question index and score
 
@@ -170,7 +170,11 @@ let score = 0;
 let scoreCorrect = 0;
 let scoreIncorrect = 0;
 
-//Starts quiz with the first question and displays next button
+/**
+ * Start quiz with the first question from the list and resets the question index 
+ * display next button and hides the start button
+ * result is the first question is displayed
+ */
 
 function beginQuiz() {
     questionList = 0;
@@ -183,7 +187,10 @@ function beginQuiz() {
     displayQuestion();
 }
 
-//Iterate the questions array and displays each in order
+/**Iterate the questions array and displays each in order
+ * remove the start button from the quiz area
+ * next question is shown from the question list
+*/ 
 
 function displayQuestion() {
     resetQuiz();
@@ -193,7 +200,11 @@ function displayQuestion() {
     questionOption.innerHTML = nextQuestionShown + ". " + questionShown.question;
 
 
-    //Create buttons to display the answers and removes the answer buttons in html
+    /**Create buttons to display the answer text
+     * check the answer is correct from the question index
+     * answer is selected when user clicks
+     * remove the answer buttons in html
+    */ 
 
     questionShown.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -207,7 +218,9 @@ function displayQuestion() {
     });
 }
 
-//Resets the quiz to the default
+/**
+ * Resets the quiz to the default
+*/
 
 function resetQuiz() {
     buttonNext.style.display = "none";
@@ -218,10 +231,10 @@ function resetQuiz() {
 }
 
 /**
- * Selects the correct answer from the question array and 
- * adds the class of correct and incorrect and increments the old score
- * and disables the button when correct answer selected,
- * then display the next button
+ * Select the answer from the four answer options in the question array
+ * add the class of correct and incorrect and increment the old score by 1
+ * disable the answer buttons when correct answer selected,
+ * display the next button
  */
 
 function selectAnswer(e) {
@@ -244,14 +257,20 @@ function selectAnswer(e) {
     buttonNext.style.display = "inline-block";
 }
 
-//Gets the current score and increments it by 1
+/**
+ * Get the current score and increments it by 1
+ * if answer correct display in the answer correct score area
+*/
 
 function incrementCorrectAnswer() {
     let oldScore = parseInt(document.getElementById("score-correct").innerText);
     document.getElementById("score-correct").innerText=++oldScore;
 }
 
-//Gets the current score and increments it by 1
+/**
+ * Get the current score and increments it by 1
+ * if answer incorrect display in the answer incorrect score area
+*/
 
 function incrementIncorrectAnswer() {
     let oldScore = parseInt(document.getElementById("score-incorrect").innerText);
@@ -259,8 +278,9 @@ function incrementIncorrectAnswer() {
 }
 
 /**
- * Displays the score to the user at the end of the 
- * questions array and restarts the quiz
+ * Display the score to the user at the end of the questions array
+ * reset the quiz score and question list to zero
+ * show start button for user to restart the quiz
  */
 
 function displayScore() {
@@ -271,8 +291,9 @@ function displayScore() {
 }
 
 /**
- * Displays the next question in the questions 
- * array until the end when the score is shown
+ * Display the next question in the questions array
+ * if question options are less than the number of questions, display next question on click
+ * if question options are more than question length, display score and restart quiz
  */
 
 function nextQuestion() {
