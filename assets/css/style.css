@@ -176,7 +176,8 @@ h2 {
     height: 40px;
 }
 
-@media only screen and (min-width: 310px) {
+/* For small screen sizes below 370px width */
+@media screen and (max-width: 370px) {
 
     body {
         height: auto;
