@@ -74,12 +74,12 @@ const questions = [
         ]
     },
     {
-        question: "Where on Earth is the water the purist?",
+        question: "Plants get water out of the ground and release water vapour. What is this process?",
         answers: [
-            { text: "Rivers and streams", correct: false },
-            { text: "Sulphur springs", correct: false },
-            { text: "Lakes and ponds", correct: false },
-            { text: "Glaciers and ice caps", correct: true },
+            { text: "Precipitation", correct: false },
+            { text: "Condensation", correct: false },
+            { text: "Evaporation", correct: false },
+            { text: "Transpiration", correct: true },
         ]
     },
     {
