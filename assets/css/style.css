@@ -79,11 +79,17 @@ h2 {
     border-radius: 5px;
     width: 200px;
     height: 100px;
-    background-color: blue;
+    background-color: #0000FF;
     text-transform: uppercase;
     color: white;
     cursor: pointer;
     font-size: 30px;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    background-color: #e4e170;
+    transition: 0.3s;
 }
 
 #next-button {
@@ -93,7 +99,7 @@ h2 {
     border-radius: 5px;
     width: 100px;
     height: 50px;
-    background-color: blue;
+    background-color: #0000FF;
     text-transform: uppercase;
     color: white;
     cursor: pointer;
@@ -170,39 +176,29 @@ h2 {
     height: 40px;
 }
 
-/* For small screens sizes from 510px wide and down */
-@media screen and (max-width: 510px) {
-
-    * {
-        font-size: 90%;
-    }
+@media only screen and (min-width: 310px) {
 
     body {
-        height: 110%;
+        height: auto;
     }
 
-    h1 {
-        font-size: 18px;
+    #quiz{
+        margin: 0px;
+        padding: 10px;
+        height: 425px;
     }
 
-    h2 {
-        font-size: 15px;
-    }
-
-    #quiz {
-        margin: 0;
-        height: 90%;
-    }
-
-    #start-button, #next-button {
-        display: inline-grid;
-        margin: 0;
-        width: 50px;
+    #next-button {
         height: 30px;
     }
 
     .btns {
-        margin: 5px;
-        font-size: small;
+        height: 30px;
+        font-size: 10px;
     }
-}
+}   
+
+
+
+
+
