@@ -163,6 +163,46 @@ __Colorspace__
 
 [Colorspace](https://mycolor.space/) used to check the palette works together.
 
+## Deployment 
+
+To access this project in GitHub;
+
+1.  Firstly Log into [Github](https://github.com/).
+
+2.  Select repository [estii20/water-cycle-quiz](https://github.com/estii20/water-cycle-quiz).
+
+3.  Select settings from menu.
+
+4.  Select Pages from left menu bar.
+
+5.  Scroll and select Master branch from the drop down menu to deploy the website.
+
+6.  Retrieve the automatically generated link from the GitHub pages section.
+
+__Running the project locally;__
+
+1.  To create a clone of this project follow the instructions below;
+
+2.  Create a GitPod account [Gitpod](https://gitpod.io/login/).
+
+3.  Open the Chrome browser.
+
+4.  Click to the top of the Chrome navigation bar and enable the extension Gitpod Browser Extension for Chrome. 
+
+5.  Link it.
+
+6.  Restart the browser when prompted to do so.
+
+7.  Log into GitPod with your account username and password.
+
+8.  Select the project in GitHub repositories.
+
+9.  Click on the green “Gitpod” button to the top right of the page.
+
+10. A new gitpod workspace opens.
+
+11. It is now possible to work locally on the project.
+
 
 
 
