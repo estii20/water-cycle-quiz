@@ -49,7 +49,7 @@ const questions = [
     {
         question: "Why is the ocean salty?",
         answers: [
-            { text: "Groundwater picks up salt and minerals", correct: true },
+            { text: "Groundwater picks up salt", correct: true },
             { text: "From the skin of sea life animals", correct: false },
             { text: "Salt is carried down in rainwater", correct: false },
             { text: "Human pollution", correct: false },
@@ -74,7 +74,7 @@ const questions = [
         ]
     },
     {
-        question: "Plants get water out of the ground and release water vapour. What is this process?",
+        question: "Plants release water vapour. What is this process?",
         answers: [
             { text: "Precipitation", correct: false },
             { text: "Condensation", correct: false },
@@ -83,7 +83,7 @@ const questions = [
         ]
     },
     {
-        question: "What is it called when water is turned into a vapour?",
+        question: "What happens when water turns into a vapour?",
         answers: [
             { text: "Precipitation", correct: false },
             { text: "Evaporation", correct: true },
