@@ -141,16 +141,10 @@ const questions = [
 
 //Quiz area variables
 
-const quizPanelElement = document.getElementsByClassName("quiz-panel");
 const startButton = document.getElementById("start-button");
 const questionOption = document.getElementById("question");
 const buttonsAnswer = document.getElementById("answer-btns");
 const buttonNext = document.getElementById("next-button");
-
-//Score area variables
-
-const scoreCorrectElement = document.getElementById("score-correct");
-const scoreIncorrectElement = document.getElementById("score-incorrect");
 
 /**
  * DOM fully loaded and parsed
@@ -181,6 +175,7 @@ function beginQuiz() {
     score = 0;
     scoreCorrect = 0;
     scoreIncorrect = 0;
+    oldScore = 0;
     buttonNext.innerHTML = "Next";
     startButton.classList.add("hide");
     buttonsAnswer.classList.remove("hide");
