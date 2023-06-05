@@ -212,6 +212,15 @@ h2 {
     }
 }   
 
+/* For small screen sizes below 320px width */
+@media screen and (min-width: 320px) {
+    #score-correct h2, #correct h2, #score-incorrect h2, #incorrect h2 {
+        width: 200px;
+    }
+
+}
+
+
 
 
 
