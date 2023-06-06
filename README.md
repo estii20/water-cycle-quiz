@@ -107,8 +107,14 @@ The body font used is the charcoal font-color `#3a3a3a` to add contrast to the b
 
 - The heading section has a Logo with font awesome image of clouds, rain and sea and the name of the quiz.
 - Number of questions displayed and motivational message to players.
-- Start button
+- Start button call to action, with the motivational message "Let's learn!"
 - Score area
+
+An event listener waits for a click on the start button. The start button shown waits for a click and shows the start button in the quiz area and the score area tally.
+
+Once the quiz starts, the first question from the question list displays, the next button appears and the start button is hidden using CSS display none.
+
+The function to begin the quiz iterates through the questions array and displays each in order. There are fifteen in total.
 
 ### Quiz area
 
@@ -117,31 +123,37 @@ The body font used is the charcoal font-color `#3a3a3a` to add contrast to the b
 - Features the fifteen water cycle questions. 
 - Four option buttons with three incorrect answers and one correct answer and a start button. As the player moves through the game there is a next button.
 
-### Answer correct and incorrect
+The function to display the questions creates buttons to display the answer text, then checks if the answer is correct from the question index. The answer is then selected when the user clicks and the answer buttons are appended.
+
+### Answer correct or incorrect
 
 ![Color green highlights the correct answer](assets/images/README-images/question-correct.png "image of the correct answer button")
 
 Responds if the player is correct or incorrect, by highlighting the correct answer button as green.
 
 ![Color red highlights the correct answer is highlighted green](assets/images/README-images/question-incorrect.png "image of the incorrect answer button")
+ 
+The function select answer then selects the answer from the four answer options in the question array.
+ 
+The wrong answer button selected is highlighted red and the correct answer not seleected is highlight as green.
 
- The wrong answer button selected is highlighted red and the correct answer not seleected is highlight as green.
-
- Hover on the buttons is disabled on selecting an answer and the next button displays.
+Hover on the buttons is disabled on selecting an answer so that the user can only choose to click on the next button.
 
 ### Score Area
 
 ![Score tally](assets/images/README-images/score-area.png "image of the score tally correct and incorrect")
 
+Once the answer is either correct or incorrect the old score is adjusted accordingly as correct and incorrect. 
+
 Lets the player tally the number of questions they have correctly or incorrectly answered during the whole time of play, even when retsarting the quiz for a new attempt.
+
+Once all the questions are complete, the function to reset the quiz, resets the state to the default.
 
 ### Replay Quiz
 
 ![Score and replay](assets/images/README-images/replay-quiz.png "image of the final score and the restart button")
 
-Once all fifteen questions have completed the player is shown the score out of 15.
-The button to restart the quiz is shown, so the player can continue to play again.
-
+The display score function is called once the fifteen questions are completed. The score and the question list are reset to zero. The final score is shown in the quiz area and the restart button is displayed, as a call to action to replay the quiz.
 
 ## Future Features
 
