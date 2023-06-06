@@ -3,7 +3,7 @@
 A quiz to test the key concepts of the water cycle for primary school children, KS2 aged between 7 and 11 years. A fun way to put into practice what the children have learnt in class. An online quiz format is more interactive for children and suits visual learners in particular. Ideal for students and teachers who learn and teach remotely.
 
 This quiz asks questions about the water cycle namely; evaporation, condensation, precipitation and ground runoff.
-The questions will test the knowledge of how Water is recycled in a process called the water cycle. 
+The questions will test the knowledge of how water is recycled in a process called the water cycle. 
 Evaporation - water in the sea rises as vapour into the sky. 
 Condensation - droplets form and become clouds. 
 Rain (precipitation) falls onto the ground from clouds. 
@@ -35,6 +35,8 @@ The process begins again.
 
 To attract children to learn and interact with the information they have learnt at school.
 A background picture of land and sky to give a bright and enticing look to the quiz.
+
+![Background Image](assets/images/README-images/landscape.jpg "Background image for Water Cycle Quiz")
 
 __Header - Logo__
 
@@ -94,7 +96,7 @@ The body font used is the charcoal font-color `#3a3a3a` to add contrast to the b
 
 ### Fonts
 
-- The font Poppins used throughout to give a clean look for the user.
+- The font `Poppins` used throughout to give a clean look for the user.
 - Used [fontjoy](https://fontjoy.com/) to find the font for the logo and headings.
 - Fonts imported from [Google Fonts](https://fonts.google.com/).
 - [Font Awesome](https://fontawesome.com/) used to add visual cues to the Logo and score area.
@@ -123,7 +125,7 @@ The function to begin the quiz iterates through the questions array and displays
 - Features the fifteen water cycle questions. 
 - Four option buttons with three incorrect answers and one correct answer and a start button. As the player moves through the game there is a next button.
 
-The function to display the questions creates buttons to display the answer text, then checks if the answer is correct from the question index. The answer is then selected when the user clicks and the answer buttons are appended.
+The function to display the questions creates buttons to display the answer text, then checks if the answer is correct from the question index. Then the function select answer shows the answer from the four answer options in the question array. Once the answer is selected when the user clicks, the original answer buttons are appended.
 
 ### Answer correct or incorrect
 
@@ -132,9 +134,7 @@ The function to display the questions creates buttons to display the answer text
 Responds if the player is correct or incorrect, by highlighting the correct answer button as green.
 
 ![Color red highlights the correct answer is highlighted green](assets/images/README-images/question-incorrect.png "image of the incorrect answer button")
- 
-The function select answer then selects the answer from the four answer options in the question array.
- 
+
 The wrong answer button selected is highlighted red and the correct answer not seleected is highlight as green.
 
 Hover on the buttons is disabled on selecting an answer so that the user can only choose to click on the next button.
@@ -185,7 +185,7 @@ __Favicon__
 
 __Fontjoy__
 
-[fontjoy](https://fontjoy.com/) to find the font for the quiz.
+[Fontjoy](https://fontjoy.com/) to find the font for the quiz.
 
 __Google Fonts__
 
@@ -200,7 +200,7 @@ Sans-serif used as an alternative in case of issues viewing on different browser
 __Convertio__
 
 To change images from jpeg to webp available at
-[Convertio](https://convertio.co/download/66c2e566ed18555e5e989956c82474de81cdf7/)
+[Convertio](https://convertio.co/download/66c2e566ed18555e5e989956c82474de81cdf7/).
 
 __Image Resizer__
 
@@ -216,7 +216,7 @@ __Colorspace__
 
 __Mobile Friendly__
 
-[Mobile Friendly](https://search.google.com/test/mobile-friendly) to check for mobile design/
+[Mobile Friendly](https://search.google.com/test/mobile-friendly) to check for mobile design.
 
 __Browser Stack__
 
@@ -349,7 +349,8 @@ Changes pushed to the main branch will automatically update on the site.
 
 __Content__
 
-Question and answer content information researched at
+Question and answer content information researched at;
+
 [Education quizzes KS2 Science The Water Cycle](https://www.educationquizzes.com/ks2/science/the-water-cycle/)
 
 [Cape Cod Groundwater Organization Water Cycle PDF](https://www.capecodgroundwater.org/wp-content/uploads/2020/05/Correct-Answers-Water-Cycle.pdf)
