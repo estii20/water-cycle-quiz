@@ -185,7 +185,7 @@ h2 {
 }
 
 /* For small and medium screen sizes below 1024px width */
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
 
     h1 {
         font-size: 25px;
@@ -213,18 +213,22 @@ h2 {
 }   
 
 /* For small screen sizes below 360px width */
-@media screen and (min-width: 360px) {
+@media (max-width: 360px) {
 
     h1 {
         font-size: 20px;
+    }
+
+    #start-button {
+        height: 70px;
     }
 
     #score-correct h2, #score-incorrect h2 {
         width: 50px;
     }
 
-    #correct h2, #incorrect h2 {
-        display: none;
+    #correct, #incorrect {
+        width: 250px;
     }
 }
 
