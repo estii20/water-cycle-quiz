@@ -62,6 +62,8 @@ Documents the number of questions correct and incorrect.
 
 Webpage and mobile version made using a wireframe tool on [Figma](https://www.figma.com/)
 
+![Wireframe](assets/images/README-images/wireframe.png "Wireframe image for Water Cycle Quiz")
+
 ### Surface
 
 To create a clear visual platform for the quiz game, that is attractive to young players.
@@ -164,6 +166,10 @@ __Font Awesome__
 
 [Font Awesome](https://fontawesome.com/)
 Provides visual cues to the user and is used for the correct/incorrect answer icons.
+
+__Fontjoy__
+
+[fontjoy](https://fontjoy.com/) to find the font for the quiz.
 
 __Google Fonts__
 
