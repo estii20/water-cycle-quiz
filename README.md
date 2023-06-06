@@ -59,7 +59,7 @@ Documents the number of questions correct and incorrect.
 - Offer children the opportunity to practise their knowledge.
 - Support teachers in explaining the concepts and testing students.
 - Provide a fun learning tool which children enjoy learning.
-- Help children with different learning styles a different way of understanding the water cycle.
+- Help children with different learning styles, a different way of understanding the water cycle.
 - Give teachers a tool to know what the children understand.
 
 ### Skeleton
@@ -84,7 +84,7 @@ The answer buttons have a background color of `#f5f5f5` a whitesmoke color to pr
 
 The hover color used for the buttons is also `#e4e170`, to give a cohesive visual. 
 
-The next button and start button are `#0000FF` a bright blue to contrast well with the background colors.
+The next and start button are `#0000FF` a bright blue to contrast well with the background colors.
 
 The quiz area background uses the background image of hills and sky to complement the subject of the water cycle.
 
@@ -98,7 +98,7 @@ The body font used is the charcoal font-color `#3a3a3a` to add contrast to the b
 
 ### Fonts
 
-- The font `Poppins` used throughout to give a clean look for the user.
+- The font `poppins` used throughout to give a clean look for the user.
 - Used [fontjoy](https://fontjoy.com/) to find the font for the logo and headings.
 - Fonts imported from [Google Fonts](https://fonts.google.com/).
 - [Font Awesome](https://fontawesome.com/) used to add visual cues to the Logo and score area.
@@ -110,13 +110,13 @@ The body font used is the charcoal font-color `#3a3a3a` to add contrast to the b
 ![Start page](assets/images/README-images/start-button.png "Start page image for Water Cycle Quiz")
 
 - The heading section has a Logo with font awesome image of clouds, rain and sea and the name of the quiz.
-- Number of questions displayed and motivational message to players.
-- Start button call to action, with the motivational message "Let's learn!"
+- Number of questions displayed and motivational message to players, "Let's learn!"
+- Start button call to action
 - Score area
 
-An event listener waits for a click on the start button. The start button shown waits for a click and shows the start button in the quiz area and the score area tally.
+An event listener waits for a click on the start button. The start button in the quiz area and the score area tally are visible. The next button is hidden using CSS `display: none;`
 
-Once the quiz starts, the first question from the question list displays, the next button appears and the start button is hidden using CSS display none.
+Once the quiz starts, the first question from the question list displays, the next button appears and the start button is hidden using CSS class `hide`.
 
 The function to begin the quiz iterates through the questions array and displays each in order. There are fifteen in total.
 
@@ -125,7 +125,7 @@ The function to begin the quiz iterates through the questions array and displays
 ![Quiz questions and answers](assets/images/README-images/first-question.png "Quiz questions and answer image Water Cycle Quiz")
 
 - Features the fifteen water cycle questions. 
-- Four option buttons with three incorrect answers and one correct answer and a start button. As the player moves through the game there is a next button.
+- Four option buttons with three incorrect answers and one correct answer. As the player moves through the game there is a next button shown to progress through the quiz.
 
 The function to display the questions creates buttons to display the answer text, then checks if the answer is correct from the question index. Then the function select answer shows the answer from the four answer options in the question array. Once the answer is selected when the user clicks, the original answer buttons are appended.
 
@@ -139,7 +139,7 @@ Responds if the player is correct or incorrect, by highlighting the correct answ
 
 The wrong answer button selected is highlighted red and the correct answer not seleected is highlight as green.
 
-Hover on the buttons is disabled on selecting an answer so that the user can only choose to click on the next button.
+Hover on the answer buttons is disabled using the pseudo class after hover disabled on selecting an answer, so that the user can click on the next button.
 
 ### Score Area
 
@@ -147,7 +147,7 @@ Hover on the buttons is disabled on selecting an answer so that the user can onl
 
 Once the answer is either correct or incorrect the old score is adjusted accordingly as correct and incorrect. 
 
-Lets the player tally the number of questions they have correctly or incorrectly answered during the whole time of play, even when retsarting the quiz for a new attempt.
+Lets the player tally the number of questions they have correctly or incorrectly answered during the whole time of play, even when restarting the quiz for a new attempt.
 
 Once all the questions are complete, the function to reset the quiz, resets the state to the default.
 
@@ -159,7 +159,7 @@ The display score function is called once the fifteen questions are completed. T
 
 ## Future Features
 
-It would be helpful in the future to increase the number of questions and provide a random question function.
+It would be helpful in the future to increase the number of questions and provide a random question function to make it more useful to replay the quiz.
 
 ## Technology Used
 
@@ -191,11 +191,11 @@ __Fontjoy__
 
 __Google Fonts__
 
-The entire website used Google Fonts, with font joy helping to find a suitable font.
+The entire website used Google Fonts, with fontjoy helping to find the font.
 
 __Chrome Eye Dropper Extension__
 
-[eyedropper tool Chrome extension](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka?hl=pt)To find the colors for the fonts and background colors from the main background image.
+[eyedropper tool Chrome extension](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka?hl=pt)  to find the colors for the fonts and background colors from the main background image.
 
 Sans-serif used as an alternative in case of issues viewing on different browsers.
 
@@ -222,7 +222,7 @@ __Mobile Friendly__
 
 __Browser Stack__
 
-[Browser Stack](https://live.browserstack.com/) to test the site on different browsers.
+[Browser Stack](https://live.browserstack.com/) to test the site on different devices.
 
 __Lambda Test__
 
@@ -238,16 +238,17 @@ Semantic HTML to define the different sections of the quiz.
 
 ## Testing
 
-| Test | Outome |
-| --- | --- |
-| The questions display in order | Pass |
-| The correct answer displays | Pass |
-| The incorrect answer displays | Pass |
-| The score tallys correctly | Pass |
-| The start button when clicks works | Pass |
-| The next button functions | Pass |
-| The restart button resets the questions to zero | Pass |
-| Content is responsive in smaller and larger screen sizes |  |
+| Test | Description | Expected Outcome | Outome |
+| --- | --- | --- | --- |
+| Questions display in order | The questions appear in order as per the question list | The questions are not ordered randomly so should display 1 through to 15| Questions display in order |
+| Correct answer displays | Each question has three wrong answers and one correct answer | The correct answer is true and so should display correctly as green (correct)  | Each true answer displays correct as green |
+| Incorrect answer displays | Each question has three wrong answers and one correct answer | The incorrect answer selected displays as red (incorrect), the correct answer is displayed green to highlight it to the user | Each false answer displays red and shows the actual correct answer as green |
+| Tallys correctly | The score shows total number of questions tally to the user | The score increments plus correct and incorrect| Displays the total quiz attempts tally for the entire play |
+| Start button | Listens for a click | The event listener should fire when the user clicks | On click event works |
+| Next button | Hide at start and appear with answer| Hides at start of quiz and displays once the user selects an answer | Next button is visible after answer |
+| Result | The score shows total number of questions answered correctly | The score increments correctly| Displays the total score out of 15 |
+| Restart button | Reset quiz to first question | Question number 1 of 15 should appear | The quiz restarts at the first question |
+| Responsive | Adjusts to screen |  Content is responsive in smaller and larger screen sizes | The content is responsive to various screen sizes |
 
 __Further testing__
 
@@ -257,7 +258,7 @@ Tested on different browsers to ensure functionality.
 
 ## Bugs and Fixes
 
-1. Dev tools in Chrome showed that the height of the quiz area and score area needed to be smaller so that it displays the full quiz content on a small screen. Therefore a media query for small screens was added so that the font is smaller and the height of the quiz answer buttons are reduced in height to accommodate the answers but still be legible to the player. The score tally is hidden so that only the numbers are displayed on mobile screens.
+1. Dev tools in Chrome showed that the height of the quiz area and score area needed to be smaller so that it displays the full quiz content on a small screen. Therefore a media query for small screens was added so that the font is smaller and the height of the quiz answer buttons are reduced in height to accommodate the answers but still be legible to the player. 
 
 2. The quiz panel was gaining in height when the next button displayed so the height of the quiz panel was increased to accommodate the additional button.
 
@@ -265,9 +266,11 @@ Tested on different browsers to ensure functionality.
 
 4. The orientation of the screen caused the background color to only fill 60% of the height of the screen so I changed the view height  `100vh` to min screen instead of max screen.
 
+5. Firefox browser test showed the text align was not working. Removed text align `webkit center` and adjusted the margins to get the same layout.
+
 __Browser Test__
 
-[Browser Stack](https://live.browserstack.com/) and [LAMBDA Test](https://app.lambdatest.com/) used to test the quiz on different browsers. Firefox the browser displays the Score Area and Start/Next buttons to the left of the quiz container, however it is still visible to the player.
+[Browser Stack](https://live.browserstack.com/) and [LAMBDA Test](https://app.lambdatest.com/) used to test the quiz on different browsers. Firefox the browser displays the Score Area and Start/Next buttons to the left of the quiz container, therefore adjusted the text align to display correctly.
 
 ## Unfixed Bugs
 
@@ -277,7 +280,7 @@ __Validators__
 
 [W3C HTML Validator](https://validator.w3.org/)
 
-I ran code through the HTML validator and it was displayed an error as the second section of the score area. The suggestion by the validator was to add a header, so I changed the `<p>` tag to a `<h2>` tag to resolve the issue.
+I ran code through the HTML validator and it displayed an error at the second section of the score area. The suggestion by the validator was to add a header, so I changed the `<p>` tag to a `<h2>` tag to resolve the issue.
 I then ran my updated code back through the HTML validator and I found no errors.
 
 ![HTML](assets/images/README-images/html-validator.png "image of W3C html results")

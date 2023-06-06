@@ -216,7 +216,15 @@ h2 {
 }   
 
 /* For small screen sizes below 353px width */
-@media (max-width: 360px) {
+@media (max-width: 353px) {
+
+    body {
+        margin-top: 10px;
+    }
+
+    #quiz {
+        margin-top: 10px;
+    }
 
     h1 {
         font-size: 20px;
