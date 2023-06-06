@@ -11,7 +11,7 @@ Water runs off the land until it reaches a river.
 Water moves  along the river and into the sea.
 The process begins again.
 
-## Portfolio Project 2 - Estelle Specht
+## Portfolio Project 2
 
 - [Water Cycle Quiz Link](https://ui.dev/amiresponsive?url=https://estii20.github.io/water-cycle-quiz/)
 
@@ -179,6 +179,10 @@ __Font Awesome__
 [Font Awesome](https://fontawesome.com/)
 Provides visual cues to the user and is used for the correct/incorrect answer icons.
 
+__Favicon__
+
+[Favicon](https://favicon.io/) to create the icon for the webpage tab.
+
 __Fontjoy__
 
 [fontjoy](https://fontjoy.com/) to find the font for the quiz.
@@ -210,13 +214,23 @@ __Colorspace__
 
 [Colorspace](https://mycolor.space/) used to check the palette works together.
 
-## Accessibility Features
+__Mobile Friendly__
 
-All images have alt labels.
+[Mobile Friendly](https://search.google.com/test/mobile-friendly) to check for mobile design/
+
+__Browser Stack__
+
+[Browser Stack](https://live.browserstack.com/) to test the site on different browsers.
+
+__Lambda Test__
+
+[LAMBDA Test](https://app.lambdatest.com/) to test the site on different browsers.
+
+## Accessibility Features
 
 Text color chosen contrasts well to the background color to improve user visibility.
 
-Semantic html to define the different sections of the quiz.
+Semantic HTML to define the different sections of the quiz.
 
 ![Lighthouse score](assets/images/README-images/Lighthouse.png "image of lighthouse results")
 
@@ -241,21 +255,47 @@ Tested on different browsers to ensure functionality.
 
 ## Bugs and Fixes
 
+1. Dev tools in Chrome showed that the height of the quiz area and score area needed to be smaller so that it displays the full quiz content on a small screen. Therefore a media query for small screens was added so that the font is smaller and the height of the quiz answer buttons are reduced in height to accommodate the answers but still be legible to the player. The score tally is hidden so that only the numbers are displayed on mobile screens.
+
+2. The quiz panel was gaining in height when the next button displayed so the height of the quiz panel was increased to accommodate the additional button.
+
+3. The buttons for the quiz panel needed to be removed from the start game, so it was necessary to use CSS to hide the area from the start of the game.
+
+4. The orientation of the screen caused the background color to only fill 60% of the height of the screen so I changed the view height to min screen instead of max screen.
+
+__Browser Test__
+
+[Browser Stack](https://live.browserstack.com/) and [LAMBDA Test](https://app.lambdatest.com/) used to test the quiz on different browsers. Firefox the browser displays the Score Area and Start/Next buttons to the left of the quiz container, however it is still visible to the player.
+
 ## Unfixed Bugs
+
+Tests on Browser Stack failed to load the quiz in a Kindle Fire HDX7. Displays error. Further research necessary to fix this issue.
 
 __Validators__
 
 [W3C HTML Validator](https://validator.w3.org/)
 
+I ran code through the HTML validator and it was displayed an error as the second section of the score area. The suggestion by the validator was to add a header, so I changed the `<p>` tag to a `<h2>` tag to resolve the issue.
+I then ran my updated code back through the HTML validator and I found no errors.
+
 ![HTML](assets/images/README-images/html-validator.png "image of W3C html results")
 
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+Putting the CSS code through the validator I found no errors.
 
 ![CSS](assets/images/README-images/css-validator.png "image of W3C CSS results")
 
 [JSHint](https://jshint.com/)
 
-[Screenshot of W3C Validator test]()
+Whilst running the Javascript code through JS Hint, it showed three errors for unused variables, I subsequently removed the unnecessary variables that were still in my code and these errors were rectified. 
+Warnings that const, let, arrow function syntax (=>) and template literals used in my JavaScript showed ECMAScript 6 specific syntax. Suggested to use esversion 6.  
+
+![Screenshot of JSHint test](assets/images/README-images/js-hint.png)
+
+__Mobile Friendly Test__
+
+Ran the URL through the website [Mobile Friendly](https://search.google.com/test/mobile-friendly) and it passed.
 
 ## Deployment 
 
@@ -296,6 +336,14 @@ __Running the project locally;__
 10. A new gitpod workspace opens.
 
 11. It is now possible to work locally on the project.
+
+To make updates, it is necessary to commit with commit-m and push with git push so that the updates are pushed to Github. 
+
+Cloning the project will link the changes to the project repo and will be sent for approval.
+
+Forking the project will create a new repo and the code will belong to the user. Any changes made will notify the user and will give them the option to pull this new code to their repo. 
+
+Changes pushed to the main branch will automatically update on the site.
 
 ## Credits
 
