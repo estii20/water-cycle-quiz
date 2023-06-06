@@ -13,6 +13,8 @@ The process begins again.
 
 ## Portfolio Project 2
 
+![Water Cycle Quiz](assets/images/README-images/am-i-responsive.png "Image of Quiz")
+
 - [Water Cycle Quiz Link](https://ui.dev/amiresponsive?url=https://estii20.github.io/water-cycle-quiz/)
 
 - [Github Link](https://github.com/estii20/water-cycle-quiz)
@@ -259,9 +261,9 @@ Tested on different browsers to ensure functionality.
 
 2. The quiz panel was gaining in height when the next button displayed so the height of the quiz panel was increased to accommodate the additional button.
 
-3. The buttons for the quiz panel needed to be removed from the start game, so it was necessary to use CSS to hide the area from the start of the game.
+3. The score area was displaying incorrectly on small screens so I added a media query and increased the width of the score correct and score incorrect `h2`. The next button was reduced in height and the font-size for the  `h1` was decreased so it could fit on the same line.
 
-4. The orientation of the screen caused the background color to only fill 60% of the height of the screen so I changed the view height to min screen instead of max screen.
+4. The orientation of the screen caused the background color to only fill 60% of the height of the screen so I changed the view height  `100vh` to min screen instead of max screen.
 
 __Browser Test__
 

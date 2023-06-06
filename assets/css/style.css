@@ -212,7 +212,7 @@ h2 {
     }
 }   
 
-/* For small screen sizes below 360px width */
+/* For small screen sizes below 353px width */
 @media (max-width: 360px) {
 
     h1 {
