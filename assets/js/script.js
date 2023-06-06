@@ -182,7 +182,8 @@ function beginQuiz() {
     displayQuestion();
 }
 
-/**Iterate the questions array and displays each in order
+/**
+ * Iterate the questions array and displays each in order
  * remove the start button from the quiz area
  * next question is shown from the question list
 */ 
@@ -195,7 +196,8 @@ function displayQuestion() {
     questionOption.innerHTML = nextQuestionShown + ". " + questionShown.question;
 
 
-    /**Create buttons to display the answer text
+    /**
+     * Create buttons to display the answer text
      * check the answer is correct from the question index
      * answer is selected when user clicks
      * remove the answer buttons in html
