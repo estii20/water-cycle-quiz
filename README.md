@@ -2,7 +2,7 @@
 
 A quiz to test the key concepts of the water cycle for primary school children, KS2 aged between 7 and 11 years. A fun way to put into practice what the children have learnt in class. An online quiz format is more interactive for children and suits visual learners in particular. Ideal for students and teachers who learn and teach remotely.
 
-This quiz asks questions about the water cycle namely; evaporation, condensation, precipitation and ground runoff.
+This quiz asks questions about the water cycle namely; evaporation, condensation, precipitation.
 The questions will test the knowledge of how water is recycled in a process called the water cycle. 
 Evaporation - water in the sea rises as vapour into the sky. 
 Condensation - droplets form and become clouds. 
@@ -15,7 +15,7 @@ The process begins again.
 
 ![Water Cycle Quiz](assets/images/README-images/am-i-responsive.png "Image of Quiz")
 
-- [Water Cycle Quiz Link](https://ui.dev/amiresponsive?url=https://estii20.github.io/water-cycle-quiz/)
+- [Water Cycle Quiz Link - Am I Responsive](https://ui.dev/amiresponsive?url=https://estii20.github.io/water-cycle-quiz/)
 
 - [Github Link](https://github.com/estii20/water-cycle-quiz)
 
@@ -47,7 +47,7 @@ Font Awesome logo taken to show the clouds, water and sea. Represents the subjec
 __Question Area__
 
 There are fifteen questions.
-As the player moves through the questions, there is a notification on which question they are on taken from the question index.
+As the player moves through the questions, there is a notification on which question they are on taken from the questions index.
 Answer correct, response the button correct shows a green background and if incorrect the correct answer displayed as green and the chosen wrong answer has a red background.
 
 __Score Area__
@@ -110,7 +110,7 @@ The body font used is the charcoal font-color `#3a3a3a` to add contrast to the b
 ![Start page](assets/images/README-images/start-button.png "Start page image for Water Cycle Quiz")
 
 - The heading section has a Logo with font awesome image of clouds, rain and sea and the name of the quiz.
-- Number of questions displayed and motivational message to players, "Let's learn!"
+- Number of questions displayed and motivational message to players, "Lets learn!"
 - Start button call to action
 - Score area
 
@@ -133,21 +133,21 @@ The function to display the questions creates buttons to display the answer text
 
 ![Color green highlights the correct answer](assets/images/README-images/question-correct.png "image of the correct answer button")
 
-Responds if the player is correct or incorrect, by highlighting the correct answer button as green.
+Responds if the player is correct, by highlighting the correct answer button as green.
 
 ![Color red highlights the correct answer is highlighted green](assets/images/README-images/question-incorrect.png "image of the incorrect answer button")
 
 The wrong answer button selected is highlighted red and the correct answer not seleected is highlight as green.
 
-Hover on the answer buttons is disabled using the pseudo class after hover disabled on selecting an answer, so that the user can click on the next button.
+Hover on the answer buttons is disabled using the pseudo class after hover disabled on selecting an answer, so that the user is prompted to click on the next button.
 
 ### Score Area
 
-![Score tally](assets/images/README-images/score-area.png "image of the score tally correct and incorrect")
+![Score tally](assets/images/README-images/score-area.png "image of the score tally correct and incorrect") 
 
-Once the answer is either correct or incorrect the old score is adjusted accordingly as correct and incorrect. 
+The function to update score display takes the correct or incorrect score and the tally is adjusted accordingly as correct and incorrect.
 
-Lets the player tally the number of questions they have correctly or incorrectly answered during the whole time of play, even when restarting the quiz for a new attempt.
+This lets the player tally the number of questions they have correctly or incorrectly answered during the quiz and resets to zero at the start of the next quiz attempt.
 
 Once all the questions are complete, the function to reset the quiz, resets the state to the default.
 
@@ -159,7 +159,7 @@ The display score function is called once the fifteen questions are completed. T
 
 ## Future Features
 
-It would be helpful in the future to increase the number of questions and provide a random question function to make it more useful to replay the quiz.
+It would be helpful in the future to increase the number of questions and provide a random question function to make it more difficult and/or interesting to replay the quiz.
 
 ## Technology Used
 
@@ -241,22 +241,24 @@ Semantic HTML to define the different sections of the quiz.
 | Test | Description | Expected Outcome | Outome |
 | --- | --- | --- | --- |
 | Questions display in order | The questions appear in order as per the question list | The questions are not ordered randomly so should display 1 through to 15| Questions display in order |
-| Correct answer displays | Each question has three wrong answers and one correct answer | The correct answer is true and so should display correctly as green (correct)  | Each true answer displays correct as green |
+| Correct answer displays | Each question has three wrong answers and one correct answer | The correct answer is true and so should display correctly as green (correct)  | Each true answer displays correctly as green |
 | Incorrect answer displays | Each question has three wrong answers and one correct answer | The incorrect answer selected displays as red (incorrect), the correct answer is displayed green to highlight it to the user | Each false answer displays red and shows the actual correct answer as green |
-| Tallys correctly | The score shows total number of questions tally to the user | The score increments plus correct and incorrect| Displays the total quiz attempts tally for the entire play |
-| Start button | Listens for a click | The event listener should fire when the user clicks | On click event works |
-| Next button | Hide at start and appear with answer| Hides at start of quiz and displays once the user selects an answer | Next button is visible after answer |
-| Result | The score shows total number of questions answered correctly | The score increments correctly| Displays the total score out of 15 |
+| Tallys correctly | The score shows total number of questions answered correct and incorrect until questions complete | The score increments plus correct and incorrect, then returns to zero | Increments correctly for both incorrect and correct answers and resets to zero |
+| Start button | Listens for a click | The event listener should fire when the user clicks | On click event works and displays the first question |
+| Next button | Hide at start and appear with answer| Hides at start of quiz and displays once the user selects an answer | Next button is visible after answer is selected |
+| Result | The score shows total number of questions answered correctly out of 15 | The score increments and displays correctly| Displays the total score out of 15 |
 | Restart button | Reset quiz to first question | Question number 1 of 15 should appear | The quiz restarts at the first question |
 | Responsive | Adjusts to screen |  Content is responsive in smaller and larger screen sizes | The content is responsive to various screen sizes |
 
 __Further testing__
 
-My children aged 7 and 10 tested the quiz.
+My children aged 7 and 10 years tested the quiz. The test showed that some of the questions should be re-worded for improved understanding for the target age group.
 
-Tested on different browsers to ensure functionality.
+Tested on different browsers and devices to ensure functionality. See below for further details.
 
 ## Bugs and Fixes
+
+__Device Test__
 
 1. Dev tools in Chrome showed that the height of the quiz area and score area needed to be smaller so that it displays the full quiz content on a small screen. Therefore a media query for small screens was added so that the font is smaller and the height of the quiz answer buttons are reduced in height to accommodate the answers but still be legible to the player. 
 
@@ -266,11 +268,15 @@ Tested on different browsers to ensure functionality.
 
 4. The orientation of the screen caused the background color to only fill 60% of the height of the screen so I changed the view height  `100vh` to min screen instead of max screen.
 
-5. Firefox browser test showed the text align was not working. Removed text align `webkit center` and adjusted the margins to get the same layout.
+__Mobile Friendly Test__
+
+Ran the URL through the website [Mobile Friendly](https://search.google.com/test/mobile-friendly) and it passed.
 
 __Browser Test__
 
-[Browser Stack](https://live.browserstack.com/) and [LAMBDA Test](https://app.lambdatest.com/) used to test the quiz on different browsers. Firefox the browser displays the Score Area and Start/Next buttons to the left of the quiz container, therefore adjusted the text align to display correctly.
+[Browser Stack](https://live.browserstack.com/) and [LAMBDA Test](https://app.lambdatest.com/) used to test the quiz on different browsers. 
+
+Firefox browser test showed the text align was not working. Removed text align `webkit center`, replaced with text-align `center` and adjusted the margins to get the same layout.
 
 ## Unfixed Bugs
 
@@ -297,10 +303,6 @@ Whilst running the Javascript code through JS Hint, it showed three errors for u
 Warnings that const, let, arrow function syntax (=>) and template literals used in my JavaScript showed ECMAScript 6 specific syntax. Suggested to use esversion 6.  
 
 ![Screenshot of JSHint test](assets/images/README-images/js-hint.png)
-
-__Mobile Friendly Test__
-
-Ran the URL through the website [Mobile Friendly](https://search.google.com/test/mobile-friendly) and it passed.
 
 ## Deployment 
 
@@ -372,9 +374,9 @@ __Resources__
 
 Background color [W3school CSS Gradients](w3schools.com/css/css3_gradients.asp)
 
-Start quiz button [Web Dev Simplified Quiz start button with JavaScript](https://myoutube.com/watch?v=riDzcEQbX6k&feature=share)
+Start quiz button [Web Dev Simplified Quiz start button with JavaScript](https://youtu.be/riDzcEQbX6k)
 
-Functions for questions and answers [Easy Tutorial Pro Quiz question and answer buttons with JavaScript](https:youtube.com/watch?v=PBcqGxrr9g8&feature=share)
+Functions for questions and answers [Easy Tutorial Pro Quiz question and answer buttons with JavaScript](https://youtu.be/PBcqGxrr9g8)
 
 Score area [Love Maths Score Area, Code Insitute](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode)
 
