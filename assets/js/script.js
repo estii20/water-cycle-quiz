@@ -2,7 +2,7 @@
 
 const questions = [
     {
-        question: "What happens when clouds get too heavy to hold water?",
+        question: "When clouds get too heavy to hold water?",
         answers: [
             { text: "The water falls to the ground", correct: true },
             { text: "The water evaporates", correct: false },
@@ -20,7 +20,7 @@ const questions = [
         ]
     },
     {
-        question: "When digging a well looking for water what do you find?",
+        question: "When digging a well what do you find?",
         answers: [
             { text: "An underground river", correct: false },
             { text: "An underground aquifer", correct: true },
@@ -74,7 +74,7 @@ const questions = [
         ]
     },
     {
-        question: "Plants release water vapour. What is this process?",
+        question: "Plants release water vapour the process is?",
         answers: [
             { text: "Precipitation", correct: false },
             { text: "Condensation", correct: false },
