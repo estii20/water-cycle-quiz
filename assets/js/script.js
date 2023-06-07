@@ -175,11 +175,17 @@ function beginQuiz() {
     score = 0;
     scoreCorrect = 0;
     scoreIncorrect = 0;
-    oldScore = 0;
     buttonNext.innerHTML = "Next";
     startButton.classList.add("hide");
     buttonsAnswer.classList.remove("hide");
     displayQuestion();
+}
+
+/**Display the current scores (incorrect and correct values) in the UI */
+
+function updateScoreDisplay() {
+    document.getElementById("score-correct").innerText = scoreCorrect;
+    document.getElementById("score-incorrect").innerText = scoreIncorrect;
 }
 
 /**
@@ -256,22 +262,26 @@ function selectAnswer(e) {
 
 /**
  * Get the current score and increments it by 1
- * if answer correct display in the answer correct score area
+ * when answer correct display in the answer correct score area
+ * if all 15 questions answered then update score display
 */
 
 function incrementCorrectAnswer() {
-    let oldScore = parseInt(document.getElementById("score-correct").innerText);
-    document.getElementById("score-correct").innerText = ++oldScore;
+    scoreCorrect += 1;
+    if(scoreCorrect === "questionList"); 
+    updateScoreDisplay();
 }
 
 /**
  * Get the current score and increments it by 1
- * if answer incorrect display in the answer incorrect score area
+ * when answer incorrect display in the answer incorrect score area
+ * if all 15 questions answered then update score display
 */
 
 function incrementIncorrectAnswer() {
-    let oldScore = parseInt(document.getElementById("score-incorrect").innerText);
-    document.getElementById("score-incorrect").innerText = ++oldScore;
+    scoreIncorrect += 1;
+    if(scoreIncorrect === "questionList"); 
+    updateScoreDisplay();
 }
 
 /**
