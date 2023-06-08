@@ -74,7 +74,7 @@ const questions = [
         ]
     },
     {
-        question: "Plants release water vapour the process is?",
+        question: "Plants release water vapour, the process is?",
         answers: [
             { text: "Precipitation", correct: false },
             { text: "Condensation", correct: false },
@@ -119,7 +119,7 @@ const questions = [
         ]
     },
     {
-        question: "What does this steam contain?",
+        question: "What does steam contain?",
         answers: [
             { text: "Gas and water", correct: true },
             { text: "Water", correct: false },
