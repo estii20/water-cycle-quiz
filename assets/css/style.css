@@ -70,7 +70,9 @@ h2 {
     font-size: 18px;
 }
 
-/*disable the hover function once an answer is selected*/
+/*disable the hover function once an answer is selected
+/reference to Easy Tutorial Pro Quiz question and answer buttons with JavaScript
+*/
 
 .btns:hover:not([disabled]) {
     background-color: #e4e170;
@@ -114,6 +116,11 @@ h2 {
     background-color: #e4e170;
     transition: 0.3s;
 }
+
+/*hide class used with JavaScript so that the start button
+/and answer buttons hide when called to in the script.js file
+/reference to Web Dev Simplified Quiz start button with JavaScript
+*/
 
 .hide {
     display: none;

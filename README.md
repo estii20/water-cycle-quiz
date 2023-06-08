@@ -98,7 +98,7 @@ The body font used is the charcoal font-color `#3a3a3a` to add contrast to the b
 
 ### Fonts
 
-- The font `poppins` used throughout to give a clean look for the user.
+- The font `Poppins` used throughout to give a clean look for the user.
 - Used [fontjoy](https://fontjoy.com/) to find the font for the logo and headings.
 - Fonts imported from [Google Fonts](https://fonts.google.com/).
 - [Font Awesome](https://fontawesome.com/) used to add visual cues to the Logo and score area.
@@ -137,7 +137,7 @@ Responds if the player is correct, by highlighting the correct answer button as 
 
 ![Color red highlights the correct answer is highlighted green](assets/images/README-images/question-incorrect.png "image of the incorrect answer button")
 
-The wrong answer button selected is highlighted red and the correct answer not seleected is highlight as green.
+The wrong answer button selected is highlighted red and the correct answer not selected is highlighted as green.
 
 Hover on the answer buttons is disabled using the pseudo class after hover disabled on selecting an answer, so that the user is prompted to click on the next button.
 
@@ -147,7 +147,7 @@ Hover on the answer buttons is disabled using the pseudo class after hover disab
 
 The function to update score display takes the correct or incorrect score and the tally is adjusted accordingly as correct and incorrect.
 
-This lets the player tally the number of questions they have correctly or incorrectly answered during the quiz and resets to zero at the start of the next quiz attempt.
+This lets the player tally the number of questions they have correctly or incorrectly answered during the quiz. This resets at the start of the next quiz once the question 1 answer is chosen. Then the tally resets and starts the count again.
 
 Once all the questions are complete, the function to reset the quiz, resets the state to the default.
 
@@ -155,7 +155,7 @@ Once all the questions are complete, the function to reset the quiz, resets the 
 
 ![Score and replay](assets/images/README-images/replay-quiz.png "image of the final score and the restart button")
 
-The display score function is called once the fifteen questions are completed. The score and the question list are reset to zero. The final score is shown in the quiz area and the restart button is displayed, as a call to action to replay the quiz.
+The display score function is called once the fifteen questions are completed. The score and the question list are reset to zero. The final score is shown in the quiz area and the restart button is displayed, as a call to action to replay the quiz. The score tally resets once the first question answer is selected.
 
 ## Future Features
 
@@ -228,11 +228,17 @@ __Lambda Test__
 
 [LAMBDA Test](https://app.lambdatest.com/) to test the site on different browsers.
 
+__Convertico__
+
+Convert a Favicon at [convertico.com](https://convertico.com/#google_vignette)
+
 ## Accessibility Features
 
 Text color chosen contrasts well to the background color to improve user visibility.
 
 Semantic HTML to define the different sections of the quiz.
+
+__Lighthouse Score__
 
 ![Lighthouse score](assets/images/README-images/Lighthouse.png "image of lighthouse results")
 
@@ -243,7 +249,7 @@ Semantic HTML to define the different sections of the quiz.
 | Questions display in order | The questions appear in order as per the question list | The questions are not ordered randomly so should display 1 through to 15| Questions display in order |
 | Correct answer displays | Each question has three wrong answers and one correct answer | The correct answer is true and so should display correctly as green (correct)  | Each true answer displays correctly as green |
 | Incorrect answer displays | Each question has three wrong answers and one correct answer | The incorrect answer selected displays as red (incorrect), the correct answer is displayed green to highlight it to the user | Each false answer displays red and shows the actual correct answer as green |
-| Tallys correctly | The score shows total number of questions answered correct and incorrect until questions complete | The score increments plus correct and incorrect, then returns to zero | Increments correctly for both incorrect and correct answers and resets to zero |
+| Tallys correctly | The score shows total number of questions answered correct and incorrect until questions complete | The score increments plus correct and incorrect, then returns to zero | Increments correctly for both incorrect and correct answers and resets to zero at start of selection of question 1 answer |
 | Start button | Listens for a click | The event listener should fire when the user clicks | On click event works and displays the first question |
 | Next button | Hide at start and appear with answer| Hides at start of quiz and displays once the user selects an answer | Next button is visible after answer is selected |
 | Result | The score shows total number of questions answered correctly out of 15 | The score increments and displays correctly| Displays the total score out of 15 |
@@ -260,7 +266,7 @@ Tested on different browsers and devices to ensure functionality. See below for 
 
 __Device Test__
 
-1. Dev tools in Chrome showed that the height of the quiz area and score area needed to be smaller so that it displays the full quiz content on a small screen. Therefore a media query for small screens was added so that the font is smaller and the height of the quiz answer buttons are reduced in height to accommodate the answers but still be legible to the player. 
+1. Dev tools in Chrome showed that the height of the quiz area and score area needed to be smaller so that it displays the full quiz content on a small screen. Therefore a media query for small screens was added so that the font is smaller and the height of the quiz answer buttons are reduced to accommodate the answers but still be legible to the player. 
 
 2. The quiz panel was gaining in height when the next button displayed so the height of the quiz panel was increased to accommodate the additional button.
 
@@ -299,7 +305,7 @@ Putting the CSS code through the validator I found no errors.
 
 [JSHint](https://jshint.com/)
 
-Whilst running the Javascript code through JS Hint, it showed three errors for unused variables, I subsequently removed the unnecessary variables that were still in my code and these errors were rectified. 
+Whilst running the JavaScript code through JS Hint, it showed three errors for unused variables, I subsequently removed the unnecessary variables that were still in my code and these errors were rectified. 
 Warnings that const, let, arrow function syntax (=>) and template literals used in my JavaScript showed ECMAScript 6 specific syntax. Suggested to use esversion 6.  
 
 ![Screenshot of JSHint test](assets/images/README-images/js-hint.png)
@@ -384,6 +390,8 @@ Event Listeners [Stackoverflow DOM Content Loaded Event Listeners](https://stack
 [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
 
 Answers not showing [Stackoverflow](https://stackoverflow.com/questions/72873577/creating-a-javascript-quiz-web-app-why-wont-the-answer-options-show-under-each)
+
+How to add a Favicon [hostinger.com](https://www.hostinger.com/tutorials/how-to-add-favicon-to-website)
 
 ## Acknowledgements
 
